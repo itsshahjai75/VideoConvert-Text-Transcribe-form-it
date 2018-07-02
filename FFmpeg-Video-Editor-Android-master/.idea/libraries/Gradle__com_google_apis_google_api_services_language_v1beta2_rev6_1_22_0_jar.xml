@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.apis:google-api-services-language:v1beta2-rev6-1.22.0@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.apis/google-api-services-language/v1beta2-rev6-1.22.0/3cd42bd5a2f90669b9e8ad80d0fe355ea2da0182/google-api-services-language-v1beta2-rev6-1.22.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.apis/google-api-services-language/v1beta2-rev6-1.22.0/8a47fb1ef023588bdba71e4c976c52c071ca99ff/google-api-services-language-v1beta2-rev6-1.22.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

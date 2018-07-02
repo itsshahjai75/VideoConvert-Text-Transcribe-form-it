@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.apis:google-api-services-speech:v1beta1-rev336-1.22.0@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.apis/google-api-services-speech/v1beta1-rev336-1.22.0/9aa54fbe8ce85dac1f12b5cfb1f4fac6e343a590/google-api-services-speech-v1beta1-rev336-1.22.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.apis/google-api-services-speech/v1beta1-rev336-1.22.0/d916f40506af1a276485ec5bcc978f88d76b7b37/google-api-services-speech-v1beta1-rev336-1.22.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
