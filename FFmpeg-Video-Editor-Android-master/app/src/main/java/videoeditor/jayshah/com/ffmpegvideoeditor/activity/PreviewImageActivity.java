@@ -14,9 +14,6 @@ import java.util.ArrayList;
 import videoeditor.jayshah.com.ffmpegvideoeditor.R;
 import videoeditor.jayshah.com.ffmpegvideoeditor.adapter.PreviewImageAdapter;
 
-/**
- * Created by Bhuvnesh on 09-03-2017.
- */
 
 public class PreviewImageActivity extends AppCompatActivity {
 

@@ -13,7 +13,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
@@ -42,16 +46,17 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import videoeditor.jayshah.com.ffmpegvideoeditor.R;
 import videoeditor.jayshah.com.ffmpegvideoeditor.views.VisualizerView;
 
+import static videoeditor.jayshah.com.ffmpegvideoeditor.LanguagesGoogle.getlanguageCodeName;
+import static videoeditor.jayshah.com.ffmpegvideoeditor.LanguagesGoogle.getlanguageEnglishName;
 
-/**
- * Created by Bhuvnesh on 09-03-2017.
- */
+
 
 public class AudioPreviewActivity extends AppCompatActivity {
 
@@ -63,6 +68,8 @@ public class AudioPreviewActivity extends AppCompatActivity {
     String filePath;
 
     ProgressDialog pd1,pd2 ;
+    String selected_language="";
+
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_audio_preview);
@@ -74,6 +81,51 @@ public class AudioPreviewActivity extends AppCompatActivity {
         pd1.setCancelable(false);
         pd2 = new ProgressDialog(this);
         pd2.setCancelable(false);
+
+        // Spinner Drop down elements
+
+
+        // Spinner element
+        Spinner spinnerLanguage = (Spinner) findViewById(R.id.spinnerLanguage);
+        final Spinner spinnerLanguageCode = (Spinner) findViewById(R.id.spinnerLanguageCode);
+
+        // Creating adapter for spinner
+        ArrayAdapter<String> dataAdapterNameLAnguage = new ArrayAdapter <String>(this, android.R.layout.simple_spinner_item, getlanguageEnglishName() );
+
+        // Creating adapter for spinner
+        ArrayAdapter<String> dataAdapterCodeLanguage = new ArrayAdapter <String>(this, android.R.layout.simple_spinner_item, getlanguageCodeName() );
+
+        // Drop down layout style - list view with radio button
+        dataAdapterNameLAnguage.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Drop down layout style - list view with radio button
+        dataAdapterCodeLanguage.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // attaching data adapter to spinner
+        spinnerLanguage.setAdapter(dataAdapterNameLAnguage);
+        // attaching data adapter to spinner
+        spinnerLanguageCode.setAdapter(dataAdapterCodeLanguage);
+        spinnerLanguageCode.setEnabled(false);
+
+
+        // Spinner click listener
+        spinnerLanguage.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+
+               spinnerLanguageCode.setSelection(position,false);
+                selected_language = spinnerLanguageCode.getSelectedItem().toString();
+
+                String item = adapterView.getItemAtPosition(position).toString();
+                // Showing selected spinner item
+                Toast.makeText(adapterView.getContext(), "Selected: " + item+"  "+selected_language, Toast.LENGTH_LONG).show();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
 
 
     }
@@ -263,8 +315,8 @@ public class AudioPreviewActivity extends AppCompatActivity {
 
 
                 RecognitionConfig recognitionConfig = new RecognitionConfig();
-                recognitionConfig.setLanguageCode("en-US");
-                recognitionConfig.setLanguageCode("en-AU");
+                recognitionConfig.setLanguageCode(selected_language);
+                //recognitionConfig.setLanguageCode("en-AU");
                 //recognitionConfig.setLanguageCode("hi-IN");
 
 

@@ -68,23 +68,39 @@
             android:id="@+id/uploadVideo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tvInstructions"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/dp5"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="115dp"
+            android:layout_marginStart="13dp"
             android:background="@drawable/upload_video_selector"
-            android:gravity="center"
+            android:gravity="center|left"
             android:padding="@dimen/dp5"
             android:text="@string/uploadVideo"
             android:textColor="#FFFFFF"
-            android:textSize="@dimen/sp16" />
+            android:textSize="@dimen/sp16"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="13dp" />
+
+        <TextView
+            android:id="@+id/captureVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/videoView"
+            android:layout_alignTop="@+id/uploadVideo"
+            android:background="@drawable/upload_video_selector"
+            android:gravity="center"
+            android:padding="@dimen/dp5"
+            android:text="@string/capture_video"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/sp16"
+            android:layout_alignRight="@+id/videoView" />
 
         <TableLayout
             android:id="@+id/footer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_below="@+id/uploadVideo"
-            android:layout_marginTop="@dimen/dp5"
+            android:layout_alignParentStart="true"
             android:gravity="center_horizontal|bottom"
             android:orientation="horizontal">
 

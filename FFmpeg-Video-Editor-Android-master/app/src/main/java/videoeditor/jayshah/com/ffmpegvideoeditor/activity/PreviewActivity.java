@@ -11,11 +11,6 @@ import android.widget.TextView;
 import android.widget.VideoView;
 import videoeditor.jayshah.com.ffmpegvideoeditor.R;
 
-
-/**
- * Created by Bhuvnesh on 08-03-2017.
- */
-
 public class PreviewActivity extends AppCompatActivity {
     private VideoView videoView;
     private SeekBar seekBar;

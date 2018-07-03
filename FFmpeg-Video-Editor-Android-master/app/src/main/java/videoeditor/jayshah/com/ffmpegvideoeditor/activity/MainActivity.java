@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.drawable.ColorDrawable;
+import android.hardware.Camera;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -30,6 +31,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.github.hiteshsondhi88.libffmpeg.ExecuteBinaryResponseHandler;
@@ -59,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private static final int REQUEST_TAKE_GALLERY_VIDEO = 100;
+    private static final int REQUEST_VIDEO_CAPTURE = 200;
     private VideoView videoView;
     private RangeSeekBar rangeSeekBar;
     private Runnable r;
@@ -83,6 +86,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mContext = this;
         final TextView uploadVideo = (TextView) findViewById(R.id.uploadVideo);
+        final TextView captureVideo = (TextView) findViewById(R.id.captureVideo);
+
         TextView cutVideo = (TextView) findViewById(R.id.cropVideo);
         TextView compressVideo = (TextView) findViewById(R.id.compressVideo);
         TextView extractImages = (TextView) findViewById(R.id.extractImages);
@@ -108,17 +113,23 @@ public class MainActivity extends AppCompatActivity {
         progressDialog.setCancelable(false);
         rangeSeekBar.setEnabled(false);
         loadFFMpegBinary();
+        getPermission();
 
         uploadVideo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Build.VERSION.SDK_INT >= 23)
-                    getPermission();
-                else
-                    uploadVideo();
+                uploadVideo();
 
             }
         });
+        captureVideo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                 dispatchTakeVideoIntent();
+            }
+        });
+
+
 
         compressVideo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -239,6 +250,7 @@ public class MainActivity extends AppCompatActivity {
         String[] params = null;
         String writeExternalStorage = Manifest.permission.WRITE_EXTERNAL_STORAGE;
         String readExternalStorage = Manifest.permission.READ_EXTERNAL_STORAGE;
+        String camera = Manifest.permission.CAMERA;
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
             // Do the file write
@@ -246,17 +258,20 @@ public class MainActivity extends AppCompatActivity {
             // Request permission from the user
             ActivityCompat.requestPermissions(this,
                     new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 0);
-
         }
 
         int hasWriteExternalStoragePermission = ActivityCompat.checkSelfPermission(this, writeExternalStorage);
         int hasReadExternalStoragePermission = ActivityCompat.checkSelfPermission(this, readExternalStorage);
+        int hasCameraPermission = ActivityCompat.checkSelfPermission(this, camera);
+
         List<String> permissions = new ArrayList<String>();
 
         if (hasWriteExternalStoragePermission != PackageManager.PERMISSION_GRANTED)
             permissions.add(writeExternalStorage);
         if (hasReadExternalStoragePermission != PackageManager.PERMISSION_GRANTED)
             permissions.add(readExternalStorage);
+        if (hasCameraPermission != PackageManager.PERMISSION_GRANTED)
+            permissions.add(camera);
 
         if (!permissions.isEmpty()) {
             params = permissions.toArray(new String[permissions.size()]);
@@ -265,8 +280,8 @@ public class MainActivity extends AppCompatActivity {
             ActivityCompat.requestPermissions(MainActivity.this,
                     params,
                     100);
-        } else
-            uploadVideo();
+        }
+            //uploadVideo();
     }
 
     private void getAudioPermission() {
@@ -298,11 +313,9 @@ public class MainActivity extends AppCompatActivity {
      * Handling response for permission request
      */
     @Override
-    public void onRequestPermissionsResult(int requestCode,
-                                           String permissions[], int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
         switch (requestCode) {
             case 100: {
-
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     uploadVideo();
@@ -316,8 +329,6 @@ public class MainActivity extends AppCompatActivity {
                     extractAudioVideo();
                 }
             }
-
-
         }
     }
 
@@ -334,6 +345,18 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
+
+    private void dispatchTakeVideoIntent() {
+        Intent takeVideoIntent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
+        if (takeVideoIntent.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(takeVideoIntent, REQUEST_VIDEO_CAPTURE);
+        }
+
+        //checkCameraHardware(getBaseContext());
+
+    }
+
+
 
     @Override
     protected void onPause() {
@@ -357,7 +380,6 @@ public class MainActivity extends AppCompatActivity {
                 selectedVideoUri = data.getData();
                 videoView.setVideoURI(selectedVideoUri);
                 videoView.start();
-
 
                 videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
 
@@ -399,9 +421,55 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 });
-
-//                }
             }
+
+            if (requestCode == REQUEST_VIDEO_CAPTURE) {
+                selectedVideoUri = data.getData();
+                videoView.setVideoURI(selectedVideoUri);
+                videoView.start();
+
+                videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
+                        // TODO Auto-generated method stub
+                        duration = mp.getDuration() / 1000;
+                        tvLeft.setText("00:00:00");
+
+                        tvRight.setText(getTime(mp.getDuration() / 1000));
+                        mp.setLooping(false);
+                        rangeSeekBar.setRangeValues(0, duration);
+                        rangeSeekBar.setSelectedMinValue(0);
+                        rangeSeekBar.setSelectedMaxValue(duration);
+                        rangeSeekBar.setEnabled(true);
+
+                        rangeSeekBar.setOnRangeSeekBarChangeListener(new RangeSeekBar.OnRangeSeekBarChangeListener() {
+                            @Override
+                            public void onRangeSeekBarValuesChanged(RangeSeekBar bar, Object minValue, Object maxValue) {
+                                videoView.seekTo((int) minValue * 1000);
+
+                                tvLeft.setText(getTime((int) bar.getSelectedMinValue()));
+
+                                tvRight.setText(getTime((int) bar.getSelectedMaxValue()));
+
+                            }
+                        });
+
+                        final Handler handler = new Handler();
+                        handler.postDelayed(r = new Runnable() {
+                            @Override
+                            public void run() {
+
+                                if (videoView.getCurrentPosition() >= rangeSeekBar.getSelectedMaxValue().intValue() * 1000)
+                                    videoView.seekTo(rangeSeekBar.getSelectedMinValue().intValue() * 1000);
+                                handler.postDelayed(r, 1000);
+                            }
+                        }, 1000);
+
+                    }
+                });
+            }
+
         }
     }
 
@@ -668,8 +736,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
-
 
     /**
      * Command for segmenting video
@@ -999,6 +1065,31 @@ public class MainActivity extends AppCompatActivity {
         textDialog.setContentView(R.layout.dialog_singleoption_text);
         textDialog.setCancelable(false);
         return textDialog;
+    }
+
+
+    /** Check if this device has a camera */
+    private boolean checkCameraHardware(Context context) {
+        if (context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA)){
+            // this device has a camera
+            getCameraInstance();
+            return true;
+        } else {
+            // no camera on this device
+            return false;
+        }
+    }
+
+    /** A safe way to get an instance of the Camera object. */
+    public static Camera getCameraInstance(){
+        Camera c = null;
+        try {
+            c = Camera.open(); // attempt to get a Camera instance
+        }
+        catch (Exception e){
+            // Camera is not available (in use or does not exist)
+        }
+        return c; // returns null if camera is unavailable
     }
 
 }
