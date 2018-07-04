@@ -32,27 +32,28 @@ import com.google.api.services.speech.v1beta1.model.SyncRecognizeResponse;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.ibm.watson.developer_cloud.http.ServiceCall;
 import com.ibm.watson.developer_cloud.service.security.IamOptions;
 import com.ibm.watson.developer_cloud.speech_to_text.v1.SpeechToText;
 import com.ibm.watson.developer_cloud.speech_to_text.v1.model.RecognizeOptions;
 import com.ibm.watson.developer_cloud.speech_to_text.v1.model.SpeechRecognitionResults;
 
 import org.apache.commons.io.IOUtils;
-import org.json.JSONArray;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import videoeditor.jayshah.com.ffmpegvideoeditor.R;
 import videoeditor.jayshah.com.ffmpegvideoeditor.views.VisualizerView;
 
+import static videoeditor.jayshah.com.ffmpegvideoeditor.APICall.ResponseAPI;
+import static videoeditor.jayshah.com.ffmpegvideoeditor.LanguagesGoogle.getLanguageTransletCodeName;
+import static videoeditor.jayshah.com.ffmpegvideoeditor.LanguagesGoogle.getLanguageTransletEnglishName;
 import static videoeditor.jayshah.com.ffmpegvideoeditor.LanguagesGoogle.getlanguageCodeName;
 import static videoeditor.jayshah.com.ffmpegvideoeditor.LanguagesGoogle.getlanguageEnglishName;
 
@@ -68,7 +69,9 @@ public class AudioPreviewActivity extends AppCompatActivity {
     String filePath;
 
     ProgressDialog pd1,pd2 ;
-    String selected_language="";
+    String selected_languageVideo="en",selected_languageTranslate="";
+    Spinner spinnerLanguage,spinnerLanguageCode,spinnerLanguageTranslate,spinnerLanguageCodeTranslate;
+    TextView tvTrancribeClick,tvVideolanguage,tvTranslateLanguage;
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,14 +89,14 @@ public class AudioPreviewActivity extends AppCompatActivity {
 
 
         // Spinner element
-        Spinner spinnerLanguage = (Spinner) findViewById(R.id.spinnerLanguage);
-        final Spinner spinnerLanguageCode = (Spinner) findViewById(R.id.spinnerLanguageCode);
+        spinnerLanguage = (Spinner) findViewById(R.id.spinnerLanguage);
+        spinnerLanguageCode = (Spinner) findViewById(R.id.spinnerLanguageCode);
 
         // Creating adapter for spinner
-        ArrayAdapter<String> dataAdapterNameLAnguage = new ArrayAdapter <String>(this, android.R.layout.simple_spinner_item, getlanguageEnglishName() );
+        ArrayAdapter<String> dataAdapterNameLAnguage = new ArrayAdapter <String>(this, android.R.layout.simple_spinner_item, getLanguageTransletEnglishName() );
 
         // Creating adapter for spinner
-        ArrayAdapter<String> dataAdapterCodeLanguage = new ArrayAdapter <String>(this, android.R.layout.simple_spinner_item, getlanguageCodeName() );
+        ArrayAdapter<String> dataAdapterCodeLanguage = new ArrayAdapter <String>(this, android.R.layout.simple_spinner_item, getLanguageTransletCodeName() );
 
         // Drop down layout style - list view with radio button
         dataAdapterNameLAnguage.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -106,18 +109,58 @@ public class AudioPreviewActivity extends AppCompatActivity {
         spinnerLanguageCode.setAdapter(dataAdapterCodeLanguage);
         spinnerLanguageCode.setEnabled(false);
 
-
         // Spinner click listener
         spinnerLanguage.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
 
                spinnerLanguageCode.setSelection(position,false);
-                selected_language = spinnerLanguageCode.getSelectedItem().toString();
+                selected_languageVideo = spinnerLanguageCode.getSelectedItem().toString();
 
                 String item = adapterView.getItemAtPosition(position).toString();
                 // Showing selected spinner item
-                Toast.makeText(adapterView.getContext(), "Selected: " + item+"  "+selected_language, Toast.LENGTH_LONG).show();
+                Toast.makeText(adapterView.getContext(), "Selected: " + item+"  "+selected_languageVideo, Toast.LENGTH_LONG).show();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        // Spinner element
+        spinnerLanguageTranslate = (Spinner) findViewById(R.id.spinnerLanguageTranslate);
+        spinnerLanguageCodeTranslate = (Spinner) findViewById(R.id.spinnerLanguageCodeTranslate);
+
+        // Creating adapter for spinner
+        ArrayAdapter<String> dataAdapterNameLAnguageTranslate = new ArrayAdapter <String>(this, android.R.layout.simple_spinner_item, getLanguageTransletEnglishName() );
+
+        // Creating adapter for spinner
+        ArrayAdapter<String> dataAdapterCodeLanguageTrasnlsate = new ArrayAdapter <String>(this, android.R.layout.simple_spinner_item, getLanguageTransletCodeName() );
+
+        // Drop down layout style - list view with radio button
+        dataAdapterNameLAnguageTranslate.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Drop down layout style - list view with radio button
+        dataAdapterCodeLanguageTrasnlsate.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // attaching data adapter to spinner
+        spinnerLanguageTranslate.setAdapter(dataAdapterNameLAnguageTranslate);
+        // attaching data adapter to spinner
+        spinnerLanguageCodeTranslate.setAdapter(dataAdapterCodeLanguageTrasnlsate);
+        spinnerLanguageCodeTranslate.setEnabled(false);
+
+        // Spinner click listener
+        spinnerLanguageTranslate.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+
+                spinnerLanguageCodeTranslate.setSelection(position,false);
+                selected_languageTranslate = spinnerLanguageCodeTranslate.getSelectedItem().toString();
+
+                String item = adapterView.getItemAtPosition(position).toString();
+                // Showing selected spinner item
+                Toast.makeText(adapterView.getContext(), "Selected: " + item+"  "+selected_languageTranslate, Toast.LENGTH_LONG).show();
 
             }
 
@@ -155,13 +198,16 @@ public class AudioPreviewActivity extends AppCompatActivity {
         }
     }
 
-    TextView tvTrancribe,tvInstruction;
+    TextView tvInstruction;
     String base64EncodedData;
     private void initAudio() {
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
         filePath = getIntent().getStringExtra(FILEPATH);
         tvInstruction=(TextView) findViewById(R.id.tvInstruction);
-        tvTrancribe=(TextView) findViewById(R.id.tvTrancribe);
+        tvTrancribeClick=(TextView) findViewById(R.id.tvTrancribe);
+
+        tvVideolanguage=(TextView) findViewById(R.id.tvVideolanguage);
+        tvTranslateLanguage=(TextView) findViewById(R.id.tvTranslateLanguage);
 
         tvInstruction.setText("Audio stored at path "+filePath);
         mMediaPlayer = MediaPlayer.create(this, Uri.parse(filePath));
@@ -206,17 +252,18 @@ public class AudioPreviewActivity extends AppCompatActivity {
 
         });
 
-        tvTrancribe.setOnClickListener(new View.OnClickListener() {
+        tvTrancribeClick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 pd1.show();
 
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+
                     new GoogleSpeechTransciption().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-                    new AudioTranscription().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+                    //new IBMWatsonAudioTranscription().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
                 }else{
                     new GoogleSpeechTransciption().execute();
-                    new AudioTranscription().execute();
+                    //new IBMWatsonAudioTranscription().execute();
                 }
 
 
@@ -225,12 +272,12 @@ public class AudioPreviewActivity extends AppCompatActivity {
         });
 
 
-        //new AudioTranscription().execute();
+        //new IBMWatsonAudioTranscription().execute();
 
 
     }
 
-    public  class AudioTranscription extends AsyncTask<Object, Void, String> {
+    public  class IBMWatsonAudioTranscription extends AsyncTask<Object, Void, String> {
 
         @Override
         protected void onPreExecute() {
@@ -290,7 +337,7 @@ public class AudioPreviewActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String resultFinal) {
             super.onPostExecute(resultFinal);
-            tvTrancribe.setText(tvTrancribe.getText().toString()+"\n\n\n"+"Watson Replies this---"+resultFinal);
+            tvVideolanguage.setText("Watson Replies this---"+resultFinal);
             pd2.dismiss();
         }
     }
@@ -298,6 +345,7 @@ public class AudioPreviewActivity extends AppCompatActivity {
 
     String API_KEY = "AIzaSyB7ZDcen4uTiK9gzq4HhMo0gLes2aCPWpA";
     String resultOutput="",transcript="";
+    String finalOutput = "";
     public class GoogleSpeechTransciption extends AsyncTask<Object,Void,String>{
 
         @Override
@@ -315,7 +363,7 @@ public class AudioPreviewActivity extends AppCompatActivity {
 
 
                 RecognitionConfig recognitionConfig = new RecognitionConfig();
-                recognitionConfig.setLanguageCode(selected_language);
+                recognitionConfig.setLanguageCode(selected_languageVideo);
                 //recognitionConfig.setLanguageCode("en-AU");
                 //recognitionConfig.setLanguageCode("hi-IN");
 
@@ -356,7 +404,6 @@ public class AudioPreviewActivity extends AppCompatActivity {
             JsonObject data = new JsonParser().parse(resultOutput).getAsJsonObject();
             JsonArray results = data.get("results").getAsJsonArray();
 
-            String finalOutput = "";
             for(int a=0;a<results.size();a++){
                 JsonArray alternatives = results.get(a).getAsJsonObject().get("alternatives").getAsJsonArray();
                 for (int b=0;b<alternatives.size();b++){
@@ -364,8 +411,9 @@ public class AudioPreviewActivity extends AppCompatActivity {
                     finalOutput = finalOutput+" "+transcript;
                 }
             }
-
-            tvTrancribe.setText(tvTrancribe.getText().toString()+"\n\n\n"+"Google Replies this----"+finalOutput);
+            tvVideolanguage.setText(finalOutput);
+            //new GoogleLangDetect().execute(finalOutput,API_KEY);
+            new GoogleLangTranlate().execute(finalOutput,API_KEY);
         }
     }
 
@@ -387,4 +435,141 @@ public class AudioPreviewActivity extends AppCompatActivity {
                     }
                 }, Visualizer.getMaxCaptureRate() / 2, true, false);
     }
+
+    String lanResult;
+    protected ProgressDialog progressDialog;
+    private class GoogleLangDetect extends AsyncTask<Object, Void, String> {
+
+        @Override
+        protected void onPreExecute()//execute thaya pela
+        {
+            super.onPreExecute();
+            // Log.d("pre execute", "Executando onPreExecute ingredients");
+            //inicia diálogo de progress, mostranto processamento com servidor.
+            progressDialog = ProgressDialog.show(AudioPreviewActivity.this, "Loading", "Detecting...", true, false);
+
+        }
+
+        @Override
+        protected String doInBackground(Object... parametros) {
+
+            try {
+
+                JsonArray langArray = new JsonArray();
+                langArray.add(parametros[0].toString());
+               // landObj.addProperty("key","AIzaSyAghzY4C-5vUMIKZ9lQOyY-EV2pSckhm_c");
+                //Log.d("data send--",""+LoginJson.toString());
+
+                JsonObject langObj = new JsonObject();
+                langObj.add("q",langArray);
+
+                String responseUSerTitles = ResponseAPI(getBaseContext(), "https://translation.googleapis.com/language/translate/v2/detect?&key="+API_KEY , langObj.toString(),"post");
+                // Log.d("URL ====",Const.SERVER_URL_API+"filter_venues?"+upend);
+                lanResult=responseUSerTitles;
+
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return lanResult;
+        }
+
+
+        @Override
+        protected void onPostExecute(String result) {
+
+            String response_string = "";
+            // System.out.println("OnpostExecute----done-------");
+            super.onPostExecute(result);
+
+
+            try {
+                Log.i("RES lanResult---", lanResult);
+                /*JsonParser parser = new JsonParser();
+                JsonObject rootObj = parser.parse(resUserDetails).getAsJsonObject();
+
+                String status = rootObj.get("status").getAsString();
+                String message = rootObj.get("message").getAsString();*/
+
+
+            }
+            catch (Exception e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+
+            progressDialog.dismiss();
+        }
+    }
+
+    String TanslateResult;
+    private class GoogleLangTranlate extends AsyncTask<Object, Void, String> {
+
+        @Override
+        protected void onPreExecute()//execute thaya pela
+        {
+            super.onPreExecute();
+            // Log.d("pre execute", "Executando onPreExecute ingredients");
+            //inicia diálogo de progress, mostranto processamento com servidor.
+            progressDialog = ProgressDialog.show(AudioPreviewActivity.this, "Loading", "Detecting...", true, false);
+
+        }
+
+        @Override
+        protected String doInBackground(Object... parametros) {
+
+            try {
+
+                JsonObject langObj = new JsonObject();
+                langObj.addProperty("q",parametros[0].toString());
+                langObj.addProperty("source",selected_languageVideo);
+                langObj.addProperty("target",selected_languageTranslate);
+                langObj.addProperty("format","text");
+
+
+                String responseUSerTitles = ResponseAPI(getBaseContext(), "https://translation.googleapis.com/language/translate/v2?&key="+parametros[1].toString() , langObj.toString(),"post");
+                // Log.d("URL ====",Const.SERVER_URL_API+"filter_venues?"+upend);
+                TanslateResult=responseUSerTitles;
+
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return TanslateResult;
+        }
+
+
+        @Override
+        protected void onPostExecute(String result) {
+
+            String response_string = "";
+            // System.out.println("OnpostExecute----done-------");
+            super.onPostExecute(result);
+
+
+            try {
+                Log.i("RES TanslateResult---", TanslateResult);
+                JsonParser parser = new JsonParser();
+                JsonObject rootObj = parser.parse(TanslateResult).getAsJsonObject();
+
+                String translatedText = rootObj.get("data").getAsJsonObject().get("translations").getAsJsonArray().get(0).getAsJsonObject().get("translatedText").getAsString();
+
+                tvTranslateLanguage.setText(translatedText);
+
+            }
+            catch (Exception e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+
+            progressDialog.dismiss();
+        }
+    }
+
+
+
 }

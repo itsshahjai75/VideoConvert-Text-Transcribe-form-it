@@ -2,7 +2,12 @@
 <project version="4">
   <component name="AndroidLayouts">
     <shared>
-      <config />
+      <config>
+        <devices>
+          <device id="pixel" />
+          <device id="pixel_2" />
+        </devices>
+      </config>
     </shared>
   </component>
   <component name="AndroidLogFilters">
@@ -35,9 +40,48 @@
       <file leaf-file-name="AudioPreviewActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/AudioPreviewActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="353" column="37" lean-forward="false" selection-start-line="353" selection-start-column="37" selection-end-line="353" selection-end-column="37" />
-              <folding />
+            <state relative-caret-position="495">
+              <caret line="70" column="28" lean-forward="false" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="28" />
+              <folding>
+                <element signature="e#10688#11297#0" expanded="true" />
+                <element signature="e#11296#11297#0" expanded="true" />
+                <element signature="class#GoogleLangDetect#0;class#AudioPreviewActivity#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_audio_preview.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_audio_preview.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="727">
+              <caret line="107" column="19" lean-forward="false" selection-start-line="107" selection-start-column="19" selection-end-line="107" selection-end-column="19" />
+              <folding>
+                <element signature="e#753#2177#0" expanded="false" />
+                <element signature="e#1510#1522#0" expanded="true" />
+                <element signature="e#1555#1567#0" expanded="true" />
+                <element signature="e#1673#1696#0" expanded="true" />
+                <element signature="e#1935#1948#0" expanded="true" />
+                <element signature="e#1981#1994#0" expanded="true" />
+                <element signature="e#2110#2133#0" expanded="true" />
+                <element signature="e#2440#2453#0" expanded="true" />
+                <element signature="e#2528#3974#0" expanded="false" />
+                <element signature="e#3298#3310#0" expanded="true" />
+                <element signature="e#3343#3355#0" expanded="true" />
+                <element signature="e#3461#3484#0" expanded="true" />
+                <element signature="e#3732#3745#0" expanded="true" />
+                <element signature="e#3778#3791#0" expanded="true" />
+                <element signature="e#3907#3930#0" expanded="true" />
+                <element signature="e#5221#5234#0" expanded="true" />
+                <element signature="e#5449#5461#0" expanded="true" />
+                <element signature="e#5523#5536#0" expanded="true" />
+                <element signature="e#6033#6046#0" expanded="true" />
+                <element signature="e#6261#6273#0" expanded="true" />
+                <element signature="e#6335#6348#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -60,6 +104,8 @@
       <find>bhu</find>
       <find>bh</find>
       <find>Bhuvnesh</find>
+      <find>tvVideolanguage</find>
+      <find>tvTranslateLanguage</find>
     </findStrings>
     <replaceStrings>
       <replace>&gt;</replace>
@@ -223,10 +269,6 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="transformClassesWithMultidexlistForDebug" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="transformClassesWithDexBuilderForRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -329,6 +371,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="reportBuildArtifactsDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="transformDexArchiveWithExternalLibsDexMergerForRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -438,10 +484,6 @@
                 <option name="description" value="Assembles all variants of all applications and secondary packages." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="assemble" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="transformClassesWithMultidexlistForRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Displays a help message." />
@@ -585,6 +627,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="transformDexArchiveWithExternalLibsDexMergerForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="generateDebugSources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -639,10 +685,6 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="preReleaseUnitTestBuild" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="transformClassesWithMultidexlistForDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -813,6 +855,10 @@
                 <option name="name" value="generateDebugBuildConfig" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="transformDexArchiveWithExternalLibsDexMergerForDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Assembles and tests this project." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="build" />
@@ -971,10 +1017,6 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="transformClassesWithMultidexlistForDebug" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="transformClassesWithDexBuilderForRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -1077,6 +1119,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="reportBuildArtifactsDebug" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="transformDexArchiveWithExternalLibsDexMergerForRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
@@ -1186,10 +1232,6 @@
                 <option name="description" value="Assembles all variants of all applications and secondary packages." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="assemble" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="transformClassesWithMultidexlistForRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Displays a help message." />
@@ -1328,6 +1370,10 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="transformDexArchiveWithExternalLibsDexMergerForDebugAndroidTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="generateDebugSources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -1382,10 +1428,6 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="preReleaseUnitTestBuild" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="transformClassesWithMultidexlistForDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
@@ -1555,6 +1597,10 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="generateDebugBuildConfig" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="transformDexArchiveWithExternalLibsDexMergerForDebug" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles and tests this project." />
@@ -2087,8 +2133,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/LanguagesArray.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_audio_preview.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/LanguagesGoogle.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/xml/file_paths.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/MainActivity.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
@@ -2098,14 +2142,18 @@
         <option value="$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/adapter/PreviewImageAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/PreviewActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/PreviewImageActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/APICall.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/ConnectionDetector.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/LanguagesGoogle.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_audio_preview.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/AudioPreviewActivity.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-13" />
-    <option name="y" value="-13" />
+    <option name="x" value="5989" />
+    <option name="y" value="223" />
     <option name="width" value="2586" />
     <option name="height" value="1386" />
   </component>
@@ -2124,10 +2172,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -2148,33 +2193,15 @@
             </path>
             <path>
               <item name="FFmpeg-Video-Editor-Android-master" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="ffmpegvideoeditor" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="activity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FFmpeg-Video-Editor-Android-master" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="ffmpegvideoeditor" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="adapter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FFmpeg-Video-Editor-Android-master" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="ffmpegvideoeditor" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FFmpeg-Video-Editor-Android-master" type="1abcf292:AndroidViewProjectNode" />
               <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2185,6 +2212,11 @@
     <property name="device.picker.selection" value="93fd9a660504" />
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="videoeditor.jayshah.com.ffmpegvideoeditor" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -2281,18 +2313,6 @@
       <module name="" />
       <envs />
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <module name="FFmpeg-Video-Editor-Android-master" />
-      <envs />
-    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -2342,6 +2362,18 @@
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <module name="FFmpeg-Video-Editor-Android-master" />
+      <envs />
+    </configuration>
     <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
     </configuration>
@@ -2363,30 +2395,31 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-13" y="-13" width="2586" height="1386" extended-state="6" />
-    <editor active="true" />
+    <frame x="5107" y="-13" width="3866" height="2106" extended-state="6" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Flutter Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5523758" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20590615" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32332155" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32289416" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36460555" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13566098" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Flutter Inspector" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2396,8 +2429,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36460555" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -2405,36 +2436,39 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/AudioPreviewActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#10688#11297#0" expanded="true" />
+            <element signature="e#11296#11297#0" expanded="true" />
+            <element signature="class#GoogleLangDetect#0;class#AudioPreviewActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/AudioPreviewActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#10688#11297#0" expanded="true" />
+            <element signature="e#11296#11297#0" expanded="true" />
+            <element signature="class#GoogleLangDetect#0;class#AudioPreviewActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9636">
           <caret line="348" column="17" lean-forward="false" selection-start-line="348" selection-start-column="17" selection-end-line="348" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#getAudioPermission#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#loadFFMpegBinary#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#showUnsupportedExceptionDialog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#executeCutVideoCommand#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#executeCompressCommand#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#extractImagesVideo#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#executeFadeInFadeOutCommand#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#executeFastMotionVideoCommand#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#executeSlowMotionVideoCommand#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#extractAudioVideo#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#splitVideoCommand#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#reverseVideoCommand#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#concatVideoCommand#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#combine#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#execFFmpegBinary#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#deleteDir#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getPath#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getDataColumn#0;class#MainActivity#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2450,10 +2484,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <element signature="method#getlanguageCodeName#0;class#LanguagesGoogle#0" expanded="false" />
-            <element signature="method#getlanguageEnglishName#0;class#LanguagesGoogle#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2461,7 +2491,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1815">
           <caret line="109" column="44" lean-forward="false" selection-start-line="109" selection-start-column="44" selection-end-line="109" selection-end-column="44" />
-          <folding />
+          <folding>
+            <element signature="e#10688#11297#0" expanded="true" />
+            <element signature="e#11296#11297#0" expanded="true" />
+            <element signature="class#GoogleLangDetect#0;class#AudioPreviewActivity#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2469,27 +2503,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#getAudioPermission#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#loadFFMpegBinary#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#showUnsupportedExceptionDialog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#executeCutVideoCommand#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#executeCompressCommand#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#extractImagesVideo#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#executeFadeInFadeOutCommand#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#executeFastMotionVideoCommand#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#executeSlowMotionVideoCommand#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#extractAudioVideo#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#splitVideoCommand#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#reverseVideoCommand#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#concatVideoCommand#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#combine#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#execFFmpegBinary#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#deleteDir#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getPath#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getDataColumn#0;class#MainActivity#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2497,7 +2510,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2871">
           <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#10688#11297#0" expanded="true" />
+            <element signature="e#11296#11297#0" expanded="true" />
+            <element signature="class#GoogleLangDetect#0;class#AudioPreviewActivity#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2505,33 +2522,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-          <folding>
-            <element signature="method#getlanguageCodeName#0;class#LanguagesGoogle#0" expanded="false" />
-            <element signature="method#getlanguageEnglishName#0;class#LanguagesGoogle#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_audio_preview.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="858">
           <caret line="26" column="37" lean-forward="false" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3135">
           <caret line="95" column="57" lean-forward="false" selection-start-line="83" selection-start-column="8" selection-end-line="95" selection-end-column="57" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/LanguagesArray.java" />
@@ -2539,19 +2550,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="587">
           <caret line="4230" column="28" lean-forward="false" selection-start-line="4230" selection-start-column="28" selection-end-line="4230" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1289">
           <caret line="94" column="42" lean-forward="true" selection-start-line="94" selection-start-column="42" selection-end-line="94" selection-end-column="42" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="jar://E:/Sdk/platforms/android-25/android.jar!/android/provider/MediaStore.class">
@@ -2561,139 +2570,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_audio_preview.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="31" column="20" lean-forward="false" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/file_paths.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/file_paths.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/LanguagesGoogle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <element signature="method#getlanguageCodeName#0;class#LanguagesGoogle#0" expanded="false" />
-            <element signature="method#getlanguageEnglishName#0;class#LanguagesGoogle#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/SuperApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="2" column="56" lean-forward="false" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/SuperApplication.java" />
     <entry file="jar://$APPLICATION_HOME_DIR$/jre/jre/lib/rt.jar!/java/util/concurrent/ThreadPoolExecutor.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1419">
           <caret line="207" column="0" lean-forward="false" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
-          <folding>
-            <marker date="1523678486000" expanded="false" signature="3:117" ph="/.../" />
-            <marker date="1523678486000" expanded="true" signature="1597:1620" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="1666:1689" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="1735:1758" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="1819:1842" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="1902:1925" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="1971:1994" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="2054:2077" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="2137:2160" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="2202:2225" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="2267:2290" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="2322:2345" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="2386:2409" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="2447:2470" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="2521:2544" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="2586:2609" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="2662:2685" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="2709:2732" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="2783:2806" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="2868:2891" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="2963:2986" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="3076:3099" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="3202:3225" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="3268:3291" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="3373:3396" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="3561:3584" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="3799:3822" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="4059:4082" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="4369:4392" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="4447:4470" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="4499:4522" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="4584:4607" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="4641:4664" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="4701:4724" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="4760:4783" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="4907:4930" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="4962:4985" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="5070:5093" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="5160:5183" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="5301:5324" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="5413:5436" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="5477:5500" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="5535:5558" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="5600:5623" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="5651:5674" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="5716:5739" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="5786:5809" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="5861:5884" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="5928:5951" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="5989:6012" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="6095:6118" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="6193:6216" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="6295:6318" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="6375:6398" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="6424:6447" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="6478:6501" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="6535:6558" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="6596:6619" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="6652:6675" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="6717:6740" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="6781:6804" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="6893:6916" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="7010:7033" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="7067:7090" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="7193:7413" ph="{...}" />
-            <marker date="1523678486000" expanded="true" signature="7232:7255" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="7384:7407" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="7510:7724" ph="{...}" />
-            <marker date="1523678486000" expanded="true" signature="7543:7566" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="7695:7718" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="7819:8031" ph="{...}" />
-            <marker date="1523678486000" expanded="true" signature="7850:7873" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="8002:8025" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="8131:8348" ph="{...}" />
-            <marker date="1523678486000" expanded="true" signature="8167:8190" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="8319:8342" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="8473:9281" ph="{...}" />
-            <marker date="1523678486000" expanded="true" signature="8710:8733" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="8761:8784" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="8832:8855" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="8901:8924" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="8970:8993" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="9022:9045" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="9080:9103" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="9134:9157" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="9193:9216" ph="{}" />
-            <marker date="1523678486000" expanded="true" signature="9252:9275" ph="{}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2709,9 +2600,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
           <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2719,7 +2607,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2727,7 +2614,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2735,7 +2621,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2743,7 +2628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2751,7 +2635,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2759,54 +2642,109 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4059">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#getAudioPermission#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#loadFFMpegBinary#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#showUnsupportedExceptionDialog#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#executeCutVideoCommand#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#executeCompressCommand#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#extractImagesVideo#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#executeFadeInFadeOutCommand#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#executeFastMotionVideoCommand#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#executeSlowMotionVideoCommand#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#extractAudioVideo#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#splitVideoCommand#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#reverseVideoCommand#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#concatVideoCommand#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#combine#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#execFFmpegBinary#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#deleteDir#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getPath#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getDataColumn#0;class#MainActivity#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/ConnectionDetector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="6" column="38" lean-forward="false" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+        <state relative-caret-position="495">
+          <caret line="17" column="45" lean-forward="false" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+        <state relative-caret-position="-240">
+          <caret line="20" column="34" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="android-manifest">
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/Sdk/sources/android-27/android/content/Context.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="3279" column="31" lean-forward="false" selection-start-line="3279" selection-start-column="31" selection-end-line="3279" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/APICall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3228">
+          <caret line="34" column="25" lean-forward="false" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/LanguagesGoogle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="592" column="43" lean-forward="true" selection-start-line="592" selection-start-column="43" selection-end-line="592" selection-end-column="43" />
+          <folding>
+            <element signature="e#18643#18651#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_audio_preview.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="727">
+          <caret line="107" column="19" lean-forward="false" selection-start-line="107" selection-start-column="19" selection-end-line="107" selection-end-column="19" />
+          <folding>
+            <element signature="e#753#2177#0" expanded="false" />
+            <element signature="e#1510#1522#0" expanded="true" />
+            <element signature="e#1555#1567#0" expanded="true" />
+            <element signature="e#1673#1696#0" expanded="true" />
+            <element signature="e#1935#1948#0" expanded="true" />
+            <element signature="e#1981#1994#0" expanded="true" />
+            <element signature="e#2110#2133#0" expanded="true" />
+            <element signature="e#2440#2453#0" expanded="true" />
+            <element signature="e#2528#3974#0" expanded="false" />
+            <element signature="e#3298#3310#0" expanded="true" />
+            <element signature="e#3343#3355#0" expanded="true" />
+            <element signature="e#3461#3484#0" expanded="true" />
+            <element signature="e#3732#3745#0" expanded="true" />
+            <element signature="e#3778#3791#0" expanded="true" />
+            <element signature="e#3907#3930#0" expanded="true" />
+            <element signature="e#5221#5234#0" expanded="true" />
+            <element signature="e#5449#5461#0" expanded="true" />
+            <element signature="e#5523#5536#0" expanded="true" />
+            <element signature="e#6033#6046#0" expanded="true" />
+            <element signature="e#6261#6273#0" expanded="true" />
+            <element signature="e#6335#6348#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk">
+      <provider selected="true" editor-type-id="apk-viewer">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/AudioPreviewActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="353" column="37" lean-forward="false" selection-start-line="353" selection-start-column="37" selection-end-line="353" selection-end-column="37" />
-          <folding />
+        <state relative-caret-position="495">
+          <caret line="70" column="28" lean-forward="false" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="28" />
+          <folding>
+            <element signature="e#10688#11297#0" expanded="true" />
+            <element signature="e#11296#11297#0" expanded="true" />
+            <element signature="class#GoogleLangDetect#0;class#AudioPreviewActivity#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
