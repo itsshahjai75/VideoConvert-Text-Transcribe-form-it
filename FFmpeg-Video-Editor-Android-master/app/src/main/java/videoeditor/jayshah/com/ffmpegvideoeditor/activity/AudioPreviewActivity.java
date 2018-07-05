@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -47,6 +48,7 @@ import java.io.InputStream;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Locale;
 
 import videoeditor.jayshah.com.ffmpegvideoeditor.R;
 import videoeditor.jayshah.com.ffmpegvideoeditor.views.VisualizerView;
@@ -188,15 +190,7 @@ public class AudioPreviewActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    @Override
-    protected void onPause() {
-        super.onPause();
-        if (mMediaPlayer != null) {
-            mVisualizer.release();
-            mMediaPlayer.release();
-            mMediaPlayer = null;
-        }
-    }
+
 
     TextView tvInstruction;
     String base64EncodedData;
@@ -365,7 +359,7 @@ public class AudioPreviewActivity extends AppCompatActivity {
                 RecognitionConfig recognitionConfig = new RecognitionConfig();
                 recognitionConfig.setLanguageCode(selected_languageVideo);
                 //recognitionConfig.setLanguageCode("en-AU");
-                //recognitionConfig.setLanguageCode("hi-IN");
+                //recognitionConfig.setLanguageCode("en-US");
 
 
                 RecognitionAudio recognitionAudio = new RecognitionAudio();
@@ -385,8 +379,8 @@ public class AudioPreviewActivity extends AppCompatActivity {
                 SpeechRecognitionResult result = response.getResults().get(0);
                 resultOutput= String.valueOf(response);
 
-                transcript = result.getAlternatives().get(0).getTranscript(); //===this is zero index data from array-----
-                Log.e("transcript Outout ----", transcript);
+                //transcript = result.getAlternatives().get(0).getTranscript(); //===this is zero index data from array-----
+                //Log.e("transcript Outout ----", transcript);
 
             }catch (Exception allException){
                 allException.printStackTrace();
@@ -504,6 +498,9 @@ public class AudioPreviewActivity extends AppCompatActivity {
         }
     }
 
+
+
+    TextToSpeech t1;
     String TanslateResult;
     private class GoogleLangTranlate extends AsyncTask<Object, Void, String> {
 
@@ -560,6 +557,29 @@ public class AudioPreviewActivity extends AppCompatActivity {
 
                 tvTranslateLanguage.setText(translatedText);
 
+                t1=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int status) {
+
+
+                        if (status == TextToSpeech.SUCCESS) {
+
+                            int result = t1.setLanguage(Locale.US);
+
+                            if (result == TextToSpeech.LANG_MISSING_DATA
+                                    || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                                Log.e("TTS", "This Language is not supported");
+                            } else {
+                                speakOut();
+                            }
+
+                        } else {
+                            Log.e("TTS", "Initilization Failed!");
+                        }
+
+
+                    }
+                });
             }
             catch (Exception e) {
                 // TODO Auto-generated catch block
@@ -571,5 +591,24 @@ public class AudioPreviewActivity extends AppCompatActivity {
     }
 
 
+    private void speakOut() {
+        t1.speak(tvTranslateLanguage.getText().toString(), TextToSpeech.QUEUE_FLUSH, null);
+    }
+
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (mMediaPlayer != null) {
+            mVisualizer.release();
+            mMediaPlayer.release();
+            mMediaPlayer = null;
+        }
+
+        if(t1 !=null){
+            t1.stop();
+            t1.shutdown();
+        }
+    }
 
 }
