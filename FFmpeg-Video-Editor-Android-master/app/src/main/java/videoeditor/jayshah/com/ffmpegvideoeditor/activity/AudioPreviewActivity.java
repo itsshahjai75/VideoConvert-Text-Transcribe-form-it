@@ -77,6 +77,7 @@ public class AudioPreviewActivity extends AppCompatActivity {
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_audio_preview);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -116,7 +117,7 @@ public class AudioPreviewActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
 
-               spinnerLanguageCode.setSelection(position,false);
+                spinnerLanguageCode.setSelection(position,false);
                 selected_languageVideo = spinnerLanguageCode.getSelectedItem().toString();
 
                 String item = adapterView.getItemAtPosition(position).toString();
@@ -358,6 +359,8 @@ public class AudioPreviewActivity extends AppCompatActivity {
 
                 RecognitionConfig recognitionConfig = new RecognitionConfig();
                 recognitionConfig.setLanguageCode(selected_languageVideo);
+                recognitionConfig.setSampleRate(16000);
+                recognitionConfig.setEncoding("FLAC");
                 //recognitionConfig.setLanguageCode("en-AU");
                 //recognitionConfig.setLanguageCode("en-US");
 
@@ -498,12 +501,9 @@ public class AudioPreviewActivity extends AppCompatActivity {
         }
     }
 
-
-
     TextToSpeech t1;
     String TanslateResult;
     private class GoogleLangTranlate extends AsyncTask<Object, Void, String> {
-
         @Override
         protected void onPreExecute()//execute thaya pela
         {
@@ -525,11 +525,9 @@ public class AudioPreviewActivity extends AppCompatActivity {
                 langObj.addProperty("target",selected_languageTranslate);
                 langObj.addProperty("format","text");
 
-
                 String responseUSerTitles = ResponseAPI(getBaseContext(), "https://translation.googleapis.com/language/translate/v2?&key="+parametros[1].toString() , langObj.toString(),"post");
                 // Log.d("URL ====",Const.SERVER_URL_API+"filter_venues?"+upend);
                 TanslateResult=responseUSerTitles;
-
 
             } catch (IOException e) {
                 e.printStackTrace();

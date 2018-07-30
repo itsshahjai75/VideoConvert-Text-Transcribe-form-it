@@ -24,8 +24,10 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/AudioPreviewActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/AudioPreviewActivity.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_audio_preview.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_audio_preview.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,51 +50,53 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="AudioPreviewActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AudioPreviewActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/AudioPreviewActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1157">
-              <caret line="594" column="57" lean-forward="false" selection-start-line="594" selection-start-column="57" selection-end-line="594" selection-end-column="57" />
+            <state relative-caret-position="660">
+              <caret line="77" column="66" lean-forward="true" selection-start-line="77" selection-start-column="66" selection-end-line="77" selection-end-column="66" />
               <folding>
-                <element signature="method#onCreate#0;class#AudioPreviewActivity#0" expanded="false" />
-                <element signature="e#4081#4089#0" expanded="true" />
-                <element signature="e#4283#4291#0" expanded="true" />
-                <element signature="e#6119#6127#0" expanded="true" />
-                <element signature="e#6331#6339#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="class#5060:5780" expanded="false" />
+                <element signature="class#7183:7929" expanded="false" />
                 <element signature="method#onResume#0;class#AudioPreviewActivity#0" expanded="false" />
                 <element signature="method#onOptionsItemSelected#0;class#AudioPreviewActivity#0" expanded="false" />
                 <element signature="method#initAudio#0;class#AudioPreviewActivity#0" expanded="false" />
-                <element signature="e#9518#9725#0" expanded="true" />
-                <element signature="e#9724#9725#0" expanded="true" />
-                <element signature="e#9825#10480#0" expanded="true" />
-                <element signature="e#10479#10480#0" expanded="true" />
-                <element signature="e#10528#11137#0" expanded="true" />
-                <element signature="e#11136#11137#0" expanded="true" />
                 <element signature="class#IBMWatsonAudioTranscription#0;class#AudioPreviewActivity#0" expanded="false" />
                 <element signature="class#GoogleSpeechTransciption#0;class#AudioPreviewActivity#0" expanded="false" />
                 <element signature="method#setupVisualizerFxAndUI#0;class#AudioPreviewActivity#0" expanded="false" />
                 <element signature="class#GoogleLangDetect#0;class#AudioPreviewActivity#0" expanded="false" />
-                <element signature="e#22460#23229#0" expanded="true" />
-                <element signature="e#23228#23229#0" expanded="true" />
+                <element signature="class#GoogleLangTranlate#0;class#AudioPreviewActivity#0" expanded="false" />
+                <element signature="method#speakOut#0;class#AudioPreviewActivity#0" expanded="false" />
                 <element signature="method#onPause#0;class#AudioPreviewActivity#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_audio_preview.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_audio_preview.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
+      <file leaf-file-name="PreviewActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/PreviewActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1155">
-              <caret line="107" column="19" lean-forward="false" selection-start-line="107" selection-start-column="19" selection-end-line="107" selection-end-column="19" />
+            <state relative-caret-position="792">
+              <caret line="33" column="59" lean-forward="false" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_audio_preview.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_audio_preview.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1162">
+              <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
               <folding>
                 <element signature="e#753#2177#0" expanded="false" />
-                <element signature="e#2528#3974#0" expanded="false" />
+                <element signature="e#2529#3975#0" expanded="false" />
               </folding>
             </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
           </provider>
         </entry>
       </file>
@@ -2206,17 +2210,13 @@
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="ffmpegvideoeditor" type="cbb59c9e:AndroidPsiDirectoryNode" />
             </path>
-            <path>
-              <item name="FFmpeg-Video-Editor-Android-master" type="1abcf292:AndroidViewProjectNode" />
-              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="ProjectPane" />
       <pane id="Scope" />
+      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -2413,37 +2413,37 @@
   <component name="ToolWindowManager">
     <frame x="5107" y="-13" width="3866" height="2106" extended-state="6" />
     <layout>
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Flutter Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5696544" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Flutter Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11177106" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13539445" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32289416" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36460555" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20842217" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Flutter Inspector" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Flutter Inspector" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36460555" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -2457,48 +2457,156 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/PreviewActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="33" column="59" lean-forward="true" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/AudioPreviewActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#onCreate#0;class#AudioPreviewActivity#0" expanded="false" />
-            <element signature="e#4081#4089#0" expanded="true" />
-            <element signature="e#4283#4291#0" expanded="true" />
-            <element signature="e#6119#6127#0" expanded="true" />
-            <element signature="e#6331#6339#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="class#5060:5780" expanded="false" />
+            <element signature="class#7183:7929" expanded="false" />
             <element signature="method#onResume#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="method#initAudio#0;class#AudioPreviewActivity#0" expanded="false" />
-            <element signature="e#9518#9725#0" expanded="true" />
-            <element signature="e#9724#9725#0" expanded="true" />
-            <element signature="e#9825#10480#0" expanded="true" />
-            <element signature="e#10479#10480#0" expanded="true" />
-            <element signature="e#10528#11137#0" expanded="true" />
-            <element signature="e#11136#11137#0" expanded="true" />
             <element signature="class#IBMWatsonAudioTranscription#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="class#GoogleSpeechTransciption#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="method#setupVisualizerFxAndUI#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="class#GoogleLangDetect#0;class#AudioPreviewActivity#0" expanded="false" />
-            <element signature="e#22460#23229#0" expanded="true" />
-            <element signature="e#23228#23229#0" expanded="true" />
+            <element signature="class#GoogleLangTranlate#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="method#speakOut#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="method#onPause#0;class#AudioPreviewActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_audio_preview.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding>
+            <element signature="e#753#2177#0" expanded="false" />
+            <element signature="e#2529#3975#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/AudioPreviewActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#5060:5780" expanded="false" />
+            <element signature="class#7183:7929" expanded="false" />
+            <element signature="method#onResume#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="method#initAudio#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="class#IBMWatsonAudioTranscription#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="class#GoogleSpeechTransciption#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="method#setupVisualizerFxAndUI#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="class#GoogleLangDetect#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="class#GoogleLangTranlate#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="method#speakOut#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="method#onPause#0;class#AudioPreviewActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_audio_preview.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1155">
           <caret line="107" column="19" lean-forward="false" selection-start-line="107" selection-start-column="19" selection-end-line="107" selection-end-column="19" />
           <folding>
             <element signature="e#753#2177#0" expanded="false" />
-            <element signature="e#2528#3974#0" expanded="false" />
+            <element signature="e#2529#3975#0" expanded="false" />
           </folding>
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/AudioPreviewActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#5060:5780" expanded="false" />
+            <element signature="class#7183:7929" expanded="false" />
+            <element signature="method#onResume#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="method#initAudio#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="class#IBMWatsonAudioTranscription#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="class#GoogleSpeechTransciption#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="method#setupVisualizerFxAndUI#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="class#GoogleLangDetect#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="class#GoogleLangTranlate#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="method#speakOut#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="method#onPause#0;class#AudioPreviewActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_audio_preview.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1155">
+          <caret line="107" column="19" lean-forward="false" selection-start-line="107" selection-start-column="19" selection-end-line="107" selection-end-column="19" />
+          <folding>
+            <element signature="e#753#2177#0" expanded="false" />
+            <element signature="e#2529#3975#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/AudioPreviewActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#5060:5780" expanded="false" />
+            <element signature="class#7183:7929" expanded="false" />
+            <element signature="method#onResume#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="method#initAudio#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="class#IBMWatsonAudioTranscription#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="class#GoogleSpeechTransciption#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="method#setupVisualizerFxAndUI#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="class#GoogleLangDetect#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="class#GoogleLangTranlate#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="method#speakOut#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="method#onPause#0;class#AudioPreviewActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_audio_preview.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1155">
+          <caret line="107" column="19" lean-forward="false" selection-start-line="107" selection-start-column="19" selection-end-line="107" selection-end-column="19" />
+          <folding>
+            <element signature="e#753#2177#0" expanded="false" />
+            <element signature="e#2529#3975#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/AudioPreviewActivity.java">
@@ -2506,43 +2614,35 @@
         <state relative-caret-position="495">
           <caret line="70" column="28" lean-forward="false" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="28" />
           <folding>
-            <element signature="method#onCreate#0;class#AudioPreviewActivity#0" expanded="false" />
-            <element signature="e#4081#4089#0" expanded="true" />
-            <element signature="e#4283#4291#0" expanded="true" />
-            <element signature="e#6119#6127#0" expanded="true" />
-            <element signature="e#6331#6339#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="class#5060:5780" expanded="false" />
+            <element signature="class#7183:7929" expanded="false" />
             <element signature="method#onResume#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="method#initAudio#0;class#AudioPreviewActivity#0" expanded="false" />
-            <element signature="e#9518#9725#0" expanded="true" />
-            <element signature="e#9724#9725#0" expanded="true" />
-            <element signature="e#9825#10480#0" expanded="true" />
-            <element signature="e#10479#10480#0" expanded="true" />
-            <element signature="e#10528#11137#0" expanded="true" />
-            <element signature="e#11136#11137#0" expanded="true" />
             <element signature="class#IBMWatsonAudioTranscription#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="class#GoogleSpeechTransciption#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="method#setupVisualizerFxAndUI#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="class#GoogleLangDetect#0;class#AudioPreviewActivity#0" expanded="false" />
-            <element signature="e#22460#23229#0" expanded="true" />
-            <element signature="e#23228#23229#0" expanded="true" />
+            <element signature="class#GoogleLangTranlate#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="method#speakOut#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="method#onPause#0;class#AudioPreviewActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_audio_preview.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1155">
           <caret line="107" column="19" lean-forward="false" selection-start-line="107" selection-start-column="19" selection-end-line="107" selection-end-column="19" />
           <folding>
             <element signature="e#753#2177#0" expanded="false" />
-            <element signature="e#2528#3974#0" expanded="false" />
+            <element signature="e#2529#3975#0" expanded="false" />
           </folding>
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
@@ -2558,43 +2658,35 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#onCreate#0;class#AudioPreviewActivity#0" expanded="false" />
-            <element signature="e#4081#4089#0" expanded="true" />
-            <element signature="e#4283#4291#0" expanded="true" />
-            <element signature="e#6119#6127#0" expanded="true" />
-            <element signature="e#6331#6339#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="class#5060:5780" expanded="false" />
+            <element signature="class#7183:7929" expanded="false" />
             <element signature="method#onResume#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="method#initAudio#0;class#AudioPreviewActivity#0" expanded="false" />
-            <element signature="e#9518#9725#0" expanded="true" />
-            <element signature="e#9724#9725#0" expanded="true" />
-            <element signature="e#9825#10480#0" expanded="true" />
-            <element signature="e#10479#10480#0" expanded="true" />
-            <element signature="e#10528#11137#0" expanded="true" />
-            <element signature="e#11136#11137#0" expanded="true" />
             <element signature="class#IBMWatsonAudioTranscription#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="class#GoogleSpeechTransciption#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="method#setupVisualizerFxAndUI#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="class#GoogleLangDetect#0;class#AudioPreviewActivity#0" expanded="false" />
-            <element signature="e#22460#23229#0" expanded="true" />
-            <element signature="e#23228#23229#0" expanded="true" />
+            <element signature="class#GoogleLangTranlate#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="method#speakOut#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="method#onPause#0;class#AudioPreviewActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_audio_preview.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1155">
           <caret line="107" column="19" lean-forward="false" selection-start-line="107" selection-start-column="19" selection-end-line="107" selection-end-column="19" />
           <folding>
             <element signature="e#753#2177#0" expanded="false" />
-            <element signature="e#2528#3974#0" expanded="false" />
+            <element signature="e#2529#3975#0" expanded="false" />
           </folding>
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/AudioPreviewActivity.java">
@@ -2602,26 +2694,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#onCreate#0;class#AudioPreviewActivity#0" expanded="false" />
-            <element signature="e#4081#4089#0" expanded="true" />
-            <element signature="e#4283#4291#0" expanded="true" />
-            <element signature="e#6119#6127#0" expanded="true" />
-            <element signature="e#6331#6339#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="class#5060:5780" expanded="false" />
+            <element signature="class#7183:7929" expanded="false" />
             <element signature="method#onResume#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="method#initAudio#0;class#AudioPreviewActivity#0" expanded="false" />
-            <element signature="e#9518#9725#0" expanded="true" />
-            <element signature="e#9724#9725#0" expanded="true" />
-            <element signature="e#9825#10480#0" expanded="true" />
-            <element signature="e#10479#10480#0" expanded="true" />
-            <element signature="e#10528#11137#0" expanded="true" />
-            <element signature="e#11136#11137#0" expanded="true" />
             <element signature="class#IBMWatsonAudioTranscription#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="class#GoogleSpeechTransciption#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="method#setupVisualizerFxAndUI#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="class#GoogleLangDetect#0;class#AudioPreviewActivity#0" expanded="false" />
-            <element signature="e#22460#23229#0" expanded="true" />
-            <element signature="e#23228#23229#0" expanded="true" />
+            <element signature="class#GoogleLangTranlate#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="method#speakOut#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="method#onPause#0;class#AudioPreviewActivity#0" expanded="false" />
           </folding>
         </state>
@@ -2632,26 +2716,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#onCreate#0;class#AudioPreviewActivity#0" expanded="false" />
-            <element signature="e#4081#4089#0" expanded="true" />
-            <element signature="e#4283#4291#0" expanded="true" />
-            <element signature="e#6119#6127#0" expanded="true" />
-            <element signature="e#6331#6339#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="class#5060:5780" expanded="false" />
+            <element signature="class#7183:7929" expanded="false" />
             <element signature="method#onResume#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="method#initAudio#0;class#AudioPreviewActivity#0" expanded="false" />
-            <element signature="e#9518#9725#0" expanded="true" />
-            <element signature="e#9724#9725#0" expanded="true" />
-            <element signature="e#9825#10480#0" expanded="true" />
-            <element signature="e#10479#10480#0" expanded="true" />
-            <element signature="e#10528#11137#0" expanded="true" />
-            <element signature="e#11136#11137#0" expanded="true" />
             <element signature="class#IBMWatsonAudioTranscription#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="class#GoogleSpeechTransciption#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="method#setupVisualizerFxAndUI#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="class#GoogleLangDetect#0;class#AudioPreviewActivity#0" expanded="false" />
-            <element signature="e#22460#23229#0" expanded="true" />
-            <element signature="e#23228#23229#0" expanded="true" />
+            <element signature="class#GoogleLangTranlate#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="method#speakOut#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="method#onPause#0;class#AudioPreviewActivity#0" expanded="false" />
           </folding>
         </state>
@@ -2684,26 +2760,18 @@
         <state relative-caret-position="1815">
           <caret line="109" column="44" lean-forward="false" selection-start-line="109" selection-start-column="44" selection-end-line="109" selection-end-column="44" />
           <folding>
-            <element signature="method#onCreate#0;class#AudioPreviewActivity#0" expanded="false" />
-            <element signature="e#4081#4089#0" expanded="true" />
-            <element signature="e#4283#4291#0" expanded="true" />
-            <element signature="e#6119#6127#0" expanded="true" />
-            <element signature="e#6331#6339#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="class#5060:5780" expanded="false" />
+            <element signature="class#7183:7929" expanded="false" />
             <element signature="method#onResume#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="method#initAudio#0;class#AudioPreviewActivity#0" expanded="false" />
-            <element signature="e#9518#9725#0" expanded="true" />
-            <element signature="e#9724#9725#0" expanded="true" />
-            <element signature="e#9825#10480#0" expanded="true" />
-            <element signature="e#10479#10480#0" expanded="true" />
-            <element signature="e#10528#11137#0" expanded="true" />
-            <element signature="e#11136#11137#0" expanded="true" />
             <element signature="class#IBMWatsonAudioTranscription#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="class#GoogleSpeechTransciption#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="method#setupVisualizerFxAndUI#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="class#GoogleLangDetect#0;class#AudioPreviewActivity#0" expanded="false" />
-            <element signature="e#22460#23229#0" expanded="true" />
-            <element signature="e#23228#23229#0" expanded="true" />
+            <element signature="class#GoogleLangTranlate#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="method#speakOut#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="method#onPause#0;class#AudioPreviewActivity#0" expanded="false" />
           </folding>
         </state>
@@ -2721,26 +2789,18 @@
         <state relative-caret-position="2871">
           <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
           <folding>
-            <element signature="method#onCreate#0;class#AudioPreviewActivity#0" expanded="false" />
-            <element signature="e#4081#4089#0" expanded="true" />
-            <element signature="e#4283#4291#0" expanded="true" />
-            <element signature="e#6119#6127#0" expanded="true" />
-            <element signature="e#6331#6339#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="class#5060:5780" expanded="false" />
+            <element signature="class#7183:7929" expanded="false" />
             <element signature="method#onResume#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="method#initAudio#0;class#AudioPreviewActivity#0" expanded="false" />
-            <element signature="e#9518#9725#0" expanded="true" />
-            <element signature="e#9724#9725#0" expanded="true" />
-            <element signature="e#9825#10480#0" expanded="true" />
-            <element signature="e#10479#10480#0" expanded="true" />
-            <element signature="e#10528#11137#0" expanded="true" />
-            <element signature="e#11136#11137#0" expanded="true" />
             <element signature="class#IBMWatsonAudioTranscription#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="class#GoogleSpeechTransciption#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="method#setupVisualizerFxAndUI#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="class#GoogleLangDetect#0;class#AudioPreviewActivity#0" expanded="false" />
-            <element signature="e#22460#23229#0" expanded="true" />
-            <element signature="e#23228#23229#0" expanded="true" />
+            <element signature="class#GoogleLangTranlate#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="method#speakOut#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="method#onPause#0;class#AudioPreviewActivity#0" expanded="false" />
           </folding>
         </state>
@@ -2754,23 +2814,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_audio_preview.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="858">
           <caret line="26" column="37" lean-forward="false" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3135">
           <caret line="95" column="57" lean-forward="false" selection-start-line="83" selection-start-column="8" selection-end-line="95" selection-end-column="57" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/LanguagesArray.java" />
@@ -2782,13 +2842,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1289">
           <caret line="94" column="42" lean-forward="true" selection-start-line="94" selection-start-column="42" selection-end-line="94" selection-end-column="42" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="jar://E:/Sdk/platforms/android-25/android.jar!/android/provider/MediaStore.class">
@@ -2799,13 +2859,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/file_paths.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/SuperApplication.java" />
@@ -2845,13 +2905,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/PreviewActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/PreviewImageActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
@@ -2881,14 +2934,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-240">
           <caret line="20" column="34" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
       </provider>
     </entry>
     <entry file="file://E:/Sdk/sources/android-27/android/content/Context.java">
@@ -2912,31 +2965,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_audio_preview.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="107" column="19" lean-forward="false" selection-start-line="107" selection-start-column="19" selection-end-line="107" selection-end-column="19" />
-          <folding>
-            <element signature="e#753#2177#0" expanded="false" />
-            <element signature="e#2528#3974#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk">
       <provider selected="true" editor-type-id="apk-viewer">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1204">
-          <caret line="41" column="58" lean-forward="true" selection-start-line="41" selection-start-column="58" selection-end-line="41" selection-end-column="58" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.apis/google-api-services-speech/v1beta1-rev336-1.22.0/d916f40506af1a276485ec5bcc978f88d76b7b37/google-api-services-speech-v1beta1-rev336-1.22.0-sources.jar!/com/google/api/services/speech/v1beta1/model/RecognitionConfig.java">
@@ -2947,34 +2978,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="38" column="77" lean-forward="true" selection-start-line="38" selection-start-column="77" selection-end-line="38" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/PreviewActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="33" column="59" lean-forward="false" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/AudioPreviewActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1157">
-          <caret line="594" column="57" lean-forward="false" selection-start-line="594" selection-start-column="57" selection-end-line="594" selection-end-column="57" />
+        <state relative-caret-position="660">
+          <caret line="77" column="66" lean-forward="true" selection-start-line="77" selection-start-column="66" selection-end-line="77" selection-end-column="66" />
           <folding>
-            <element signature="method#onCreate#0;class#AudioPreviewActivity#0" expanded="false" />
-            <element signature="e#4081#4089#0" expanded="true" />
-            <element signature="e#4283#4291#0" expanded="true" />
-            <element signature="e#6119#6127#0" expanded="true" />
-            <element signature="e#6331#6339#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="class#5060:5780" expanded="false" />
+            <element signature="class#7183:7929" expanded="false" />
             <element signature="method#onResume#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="method#initAudio#0;class#AudioPreviewActivity#0" expanded="false" />
-            <element signature="e#9518#9725#0" expanded="true" />
-            <element signature="e#9724#9725#0" expanded="true" />
-            <element signature="e#9825#10480#0" expanded="true" />
-            <element signature="e#10479#10480#0" expanded="true" />
-            <element signature="e#10528#11137#0" expanded="true" />
-            <element signature="e#11136#11137#0" expanded="true" />
             <element signature="class#IBMWatsonAudioTranscription#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="class#GoogleSpeechTransciption#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="method#setupVisualizerFxAndUI#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="class#GoogleLangDetect#0;class#AudioPreviewActivity#0" expanded="false" />
-            <element signature="e#22460#23229#0" expanded="true" />
-            <element signature="e#23228#23229#0" expanded="true" />
+            <element signature="class#GoogleLangTranlate#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="method#speakOut#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="method#onPause#0;class#AudioPreviewActivity#0" expanded="false" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_audio_preview.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1162">
+          <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+          <folding>
+            <element signature="e#753#2177#0" expanded="false" />
+            <element signature="e#2529#3975#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
   </component>
