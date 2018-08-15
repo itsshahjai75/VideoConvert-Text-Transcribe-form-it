@@ -713,7 +713,7 @@ public class MainActivity extends AppCompatActivity {
         );
 
         String filePrefix = "extract_audio";
-        String fileExtn = ".flac";//mp3 for IBMwatson
+        String fileExtn = ".flac";//write mp3 for IBMwatson
         String yourRealPath = getPath(MainActivity.this, selectedVideoUri);
          dest = new File(moviesDir, filePrefix + fileExtn);
 
@@ -724,9 +724,9 @@ public class MainActivity extends AppCompatActivity {
         }
         Log.d(TAG, "startTrim: src: " + yourRealPath);
         Log.d(TAG, "startTrim: dest: " + dest.getAbsolutePath());
-        filePath = dest.getAbsolutePath();
+        filePath = dest.getPath();
 
-        String[] complexCommand = {"-y", "-i", yourRealPath, "-vn", "-ar", "16000", "-ac", "1", "-b:a", "256k", "-f", "flac", filePath};//mp3 for IBMwatson-----
+        String[] complexCommand = {"-y", "-i", yourRealPath, "-vn", "-ar", "16000", "-ac", "1", "-b:a", "256k", "-f", "flac", filePath};
         //String[] complexCommand = {"-y", "-i", yourRealPath, "-vn", "-ar", "48000", "-ac", "1", "-b:a", "256k", "-f", "flac", filePath};//mp3 for IBMwatson-----
         execFFmpegBinary(complexCommand);
 
@@ -861,7 +861,7 @@ public class MainActivity extends AppCompatActivity {
 
                         Log.e("Choice value--",""+choice);
                     } */else if (choice == 4) {
-
+                        Log.e("intent call --","111");
                         Intent intent = new Intent(MainActivity.this, AudioPreviewActivity.class);
                         intent.putExtra(FILEPATH, filePath);
                         startActivity(intent);

@@ -26,6 +26,7 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -40,11 +41,13 @@ dependencies {
     implementation 'com.google.apis:google-api-services-speech:v1beta1-rev336-1.22.0'
     implementation 'com.google.apis:google-api-services-language:v1beta2-rev6-1.22.0'
     implementation 'com.google.code.findbugs:jsr305:2.0.1'
+
     implementation('com.google.api-client:google-api-client-android:1.23.0') {
         exclude module: 'guava-jdk5'
     }
+    implementation 'commons-io:commons-io:2.5'
 
-
+    //implementation 'com.google.apis:google-api-services-language:v1-rev438-1.24.1'
 
     implementation 'com.ibm.watson.developer_cloud:java-sdk:6.1.0'
     testImplementation 'junit:junit:4.12'

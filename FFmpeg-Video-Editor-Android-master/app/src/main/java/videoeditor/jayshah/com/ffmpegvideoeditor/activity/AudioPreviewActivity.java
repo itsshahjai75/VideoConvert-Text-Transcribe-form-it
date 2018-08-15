@@ -10,6 +10,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
@@ -23,6 +24,13 @@ import android.widget.Toast;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 import com.google.api.client.repackaged.org.apache.commons.codec.binary.Base64;
+import com.google.api.services.language.v1beta2.CloudNaturalLanguageRequestInitializer;
+import com.google.api.services.language.v1beta2.CloudNaturalLanguage;
+import com.google.api.services.language.v1beta2.model.AnnotateTextRequest;
+import com.google.api.services.language.v1beta2.model.AnnotateTextResponse;
+import com.google.api.services.language.v1beta2.model.Document;
+import com.google.api.services.language.v1beta2.model.Entity;
+import com.google.api.services.language.v1beta2.model.Features;
 import com.google.api.services.speech.v1beta1.Speech;
 import com.google.api.services.speech.v1beta1.SpeechRequestInitializer;
 import com.google.api.services.speech.v1beta1.model.RecognitionAudio;
@@ -73,7 +81,7 @@ public class AudioPreviewActivity extends AppCompatActivity {
     ProgressDialog pd1,pd2 ;
     String selected_languageVideo="en",selected_languageTranslate="";
     Spinner spinnerLanguage,spinnerLanguageCode,spinnerLanguageTranslate,spinnerLanguageCodeTranslate;
-    TextView tvTrancribeClick,tvVideolanguage,tvTranslateLanguage;
+    TextView tvTrancribeClick,tvNLText,tvVideolanguage,tvTranslateLanguage;
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -200,7 +208,8 @@ public class AudioPreviewActivity extends AppCompatActivity {
         filePath = getIntent().getStringExtra(FILEPATH);
         tvInstruction=(TextView) findViewById(R.id.tvInstruction);
         tvTrancribeClick=(TextView) findViewById(R.id.tvTrancribe);
-
+        tvNLText=(TextView) findViewById(R.id.tvNLText);
+        tvNLText.setVisibility(View.GONE);
         tvVideolanguage=(TextView) findViewById(R.id.tvVideolanguage);
         tvTranslateLanguage=(TextView) findViewById(R.id.tvTranslateLanguage);
 
@@ -262,12 +271,24 @@ public class AudioPreviewActivity extends AppCompatActivity {
                 }
 
 
+                tvNLText.setVisibility(View.VISIBLE);
 
             }
         });
 
 
-        //new IBMWatsonAudioTranscription().execute();
+        tvNLText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(tvVideolanguage.getText().length()>1){
+                    googleNatulraLanguageAPI();
+                }else{
+                    Toast.makeText(AudioPreviewActivity.this,"No text found for analysis ",Toast.LENGTH_LONG).show();
+                }
+
+            }
+        });
 
 
     }
@@ -350,10 +371,8 @@ public class AudioPreviewActivity extends AppCompatActivity {
 
                 Speech speechService = new Speech.Builder(
                         AndroidHttp.newCompatibleTransport(),
-                        new AndroidJsonFactory(),
-                        null)
-                        .setSpeechRequestInitializer(
-                        new SpeechRequestInitializer(API_KEY))
+                        new AndroidJsonFactory(), null)
+                        .setSpeechRequestInitializer(new SpeechRequestInitializer(API_KEY))
                         .build();
 
 
@@ -366,19 +385,23 @@ public class AudioPreviewActivity extends AppCompatActivity {
 
 
                 RecognitionAudio recognitionAudio = new RecognitionAudio();
-                recognitionAudio.setContent(base64EncodedData);
+                //recognitionAudio.setContent(base64EncodedData);
+                recognitionAudio.setUri(base64EncodedData);
+
 
                 // Create request
                 SyncRecognizeRequest request = new SyncRecognizeRequest();
                 request.setConfig(recognitionConfig);
                 request.setAudio(recognitionAudio);
 
-// Generate response
+
+                // Generate response
                 SyncRecognizeResponse response = speechService.speech()
                         .syncrecognize(request)
                         .execute();
 
-// Extract transcript
+
+                // Extract transcript
                 SpeechRecognitionResult result = response.getResults().get(0);
                 resultOutput= String.valueOf(response);
 
@@ -398,20 +421,105 @@ public class AudioPreviewActivity extends AppCompatActivity {
             pd1.dismiss();
             Log.e("Result is---",resultOutput);
 
-            JsonObject data = new JsonParser().parse(resultOutput).getAsJsonObject();
-            JsonArray results = data.get("results").getAsJsonArray();
+            try {
 
-            for(int a=0;a<results.size();a++){
-                JsonArray alternatives = results.get(a).getAsJsonObject().get("alternatives").getAsJsonArray();
-                for (int b=0;b<alternatives.size();b++){
-                    String transcript = alternatives.get(b).getAsJsonObject().get("transcript").getAsString();
-                    finalOutput = finalOutput+" "+transcript;
+                JsonObject data = new JsonParser().parse(resultOutput).getAsJsonObject();
+                JsonArray results = data.get("results").getAsJsonArray();
+
+                for(int a=0;a<results.size();a++){
+                    JsonArray alternatives = results.get(a).getAsJsonObject().get("alternatives").getAsJsonArray();
+                    for (int b=0;b<alternatives.size();b++){
+                        String transcript = alternatives.get(b).getAsJsonObject().get("transcript").getAsString();
+                        finalOutput = finalOutput+" "+transcript;
+                    }
                 }
+                tvVideolanguage.setText(finalOutput);
+                //new GoogleLangDetect().execute(finalOutput,API_KEY);
+              // new GoogleLangTranlate().execute(finalOutput,API_KEY);
+
+
+
+
+            }catch (Exception e){
+                e.printStackTrace();
             }
-            tvVideolanguage.setText(finalOutput);
-            //new GoogleLangDetect().execute(finalOutput,API_KEY);
-            new GoogleLangTranlate().execute(finalOutput,API_KEY);
         }
+
+
+    }
+
+    private void googleNatulraLanguageAPI(){
+
+
+        final CloudNaturalLanguage naturalLanguageService =
+                new CloudNaturalLanguage.Builder(
+                        AndroidHttp.newCompatibleTransport(),
+                        new AndroidJsonFactory(),
+                        null
+                ).setCloudNaturalLanguageRequestInitializer(
+                        new CloudNaturalLanguageRequestInitializer(API_KEY)
+                ).build();
+
+        Document document = new Document();
+        document.setType("PLAIN_TEXT");
+        document.setLanguage("en-US");
+        document.setContent(finalOutput);
+
+
+        Features features = new Features();
+        features.setExtractEntities(true);
+        features.setExtractEntitySentiment(true);
+        features.setExtractSyntax(true);
+        features.setExtractDocumentSentiment(true);
+
+        final AnnotateTextRequest request = new AnnotateTextRequest();
+        request.setDocument(document);
+        request.setFeatures(features);
+
+        AsyncTask.execute(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    final AnnotateTextResponse response =
+                            naturalLanguageService.documents()
+                                    .annotateText(request).execute();
+
+
+
+
+                    final List<Entity> entityList = response.getEntities();
+                    final float sentiment = response.getDocumentSentiment().getScore();
+
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            String entities = "";
+                            for(Entity entity:entityList) {
+                                entities += "\n" +entity.getType() + entity.getName().toUpperCase();
+                            }
+                            Log.e("NLA goolge entities ---",entities+"----"+response.toString());
+
+                            AlertDialog dialog =
+                                    new AlertDialog.Builder(AudioPreviewActivity.this)
+                                            .setTitle("Sentiment: " + sentiment)
+                                            .setMessage("This audio file talks about :"
+                                                    + entities)
+                                            .setNeutralButton("Okay", null)
+                                            .create();
+                            dialog.show();
+                        }
+                    });
+
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                // More code here
+            }
+        });
+
+
     }
 
 

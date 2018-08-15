@@ -2,30 +2,29 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="videoeditor.jayshah.com.ffmpegvideoeditor">
 
-    <uses-feature android:name="android.hardware.camera" android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
-    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <!-- Needed only if your app targets Android 5.0 (API level 21) or higher. -->
     <uses-feature android:name="android.hardware.location.gps" />
 
-
     <application
-        android:allowBackup="true"
         android:name=".ApplicationMain"
+        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="${applicationId}.provider"
@@ -33,11 +32,11 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths">
-            </meta-data>
+                android:resource="@xml/file_paths" />
         </provider>
 
-        <activity android:name=".activity.MainActivity"
+        <activity
+            android:name=".activity.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,18 +44,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.PreviewActivity"
-            android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".activity.PreviewImageActivity"
-            android:screenOrientation="portrait">
-
-        </activity>
-        <activity android:name=".activity.AudioPreviewActivity"
-            android:screenOrientation="portrait">
-
-        </activity>
+        <activity
+            android:name=".activity.PreviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PreviewImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AudioPreviewActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="videoeditor.jay.com.ffmpegvideoeditor.NLApiData" />
+        <activity android:name=".NLApiData"></activity>
     </application>
 
 </manifest>
