@@ -1,6 +1,8 @@
 package videoeditor.jayshah.com.ffmpegvideoeditor.activity;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.audiofx.Visualizer;
@@ -24,6 +26,7 @@ import android.widget.Toast;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 import com.google.api.client.repackaged.org.apache.commons.codec.binary.Base64;
+import com.google.api.gax.longrunning.OperationFuture;
 import com.google.api.services.language.v1beta2.CloudNaturalLanguageRequestInitializer;
 import com.google.api.services.language.v1beta2.CloudNaturalLanguage;
 import com.google.api.services.language.v1beta2.model.AnnotateTextRequest;
@@ -38,6 +41,21 @@ import com.google.api.services.speech.v1beta1.model.RecognitionConfig;
 import com.google.api.services.speech.v1beta1.model.SpeechRecognitionResult;
 import com.google.api.services.speech.v1beta1.model.SyncRecognizeRequest;
 import com.google.api.services.speech.v1beta1.model.SyncRecognizeResponse;
+import com.google.api.services.speech.v1beta1.Speech;
+import com.google.api.services.speech.v1beta1.SpeechRequestInitializer;
+import com.google.api.services.speech.v1beta1.model.SyncRecognizeRequest;
+import com.google.api.services.speech.v1beta1.model.SyncRecognizeResponse;
+import com.google.auth.oauth2.ServiceAccountCredentials;
+import com.google.cloud.speech.v1p1beta1.LongRunningRecognizeMetadata;
+import com.google.cloud.speech.v1p1beta1.LongRunningRecognizeResponse;
+import com.google.cloud.speech.v1p1beta1.RecognizeResponse;
+import com.google.cloud.speech.v1p1beta1.SpeechClient;
+import com.google.cloud.speech.v1p1beta1.SpeechRecognitionAlternative;
+import com.google.cloud.storage.Acl;
+import com.google.cloud.storage.Bucket;
+import com.google.cloud.storage.BucketInfo;
+import com.google.cloud.storage.Storage;
+import com.google.cloud.storage.StorageOptions;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -53,13 +71,19 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
+import okio.ByteString;
+import videoeditor.jayshah.com.ffmpegvideoeditor.NLApiData;
 import videoeditor.jayshah.com.ffmpegvideoeditor.R;
 import videoeditor.jayshah.com.ffmpegvideoeditor.views.VisualizerView;
+
 
 import static videoeditor.jayshah.com.ffmpegvideoeditor.APICall.ResponseAPI;
 import static videoeditor.jayshah.com.ffmpegvideoeditor.LanguagesGoogle.getLanguageTransletCodeName;
@@ -248,6 +272,22 @@ public class AudioPreviewActivity extends AppCompatActivity {
                     base64EncodedData = Base64.encodeBase64String(audioData);
                     Log.i("Base64 Audio ===",base64EncodedData);
 
+
+                    /*
+                    THIS CODE FOR GOOLGE CLOUD SPACE
+
+                    StorageOptions.Builder storage1 = StorageOptions.newBuilder().setProjectId("jabri-209007");
+                    Storage storage = storage1.build().getService();
+
+                    //continue as normal
+                    // The name for the new bucket
+                    String bucketName = "jayJabri";  // "my-new-bucket";
+
+                    // Creates the new bucket
+                    Bucket bucket = storage.create(BucketInfo.of(bucketName));
+
+                    System.out.printf("Bucket %s created.%n", bucket.getName());*/
+
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -265,13 +305,17 @@ public class AudioPreviewActivity extends AppCompatActivity {
 
                     new GoogleSpeechTransciption().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
                     //new IBMWatsonAudioTranscription().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+
                 }else{
                     new GoogleSpeechTransciption().execute();
                     //new IBMWatsonAudioTranscription().execute();
                 }
 
+                //new GoogleLongSpeechTranslate().execute(API_KEY);
 
                 tvNLText.setVisibility(View.VISIBLE);
+
+
 
             }
         });
@@ -362,12 +406,52 @@ public class AudioPreviewActivity extends AppCompatActivity {
     String API_KEY = "AIzaSyB7ZDcen4uTiK9gzq4HhMo0gLes2aCPWpA";
     String resultOutput="",transcript="";
     String finalOutput = "";
+
+    public static void asyncRecognizeGcs(String gcsUri) throws Exception {
+        // Instantiates a client with GOOGLE_APPLICATION_CREDENTIALS
+        try (SpeechClient speech = SpeechClient.create()) {
+
+            // Configure remote file request for Linear16
+            com.google.cloud.speech.v1p1beta1.RecognitionConfig config =
+                    com.google.cloud.speech.v1p1beta1.RecognitionConfig.newBuilder()
+                            .setEncoding(com.google.cloud.speech.v1p1beta1.RecognitionConfig.AudioEncoding.FLAC)
+                            .setLanguageCode("en-US")
+                            .setSampleRateHertz(16000)
+                            .build();
+            com.google.cloud.speech.v1p1beta1.RecognitionAudio audio = com.google.cloud.speech.v1p1beta1.RecognitionAudio.newBuilder().setUri(gcsUri).build();
+
+            // Use non-blocking call for getting file transcription
+            OperationFuture<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> response =
+                    speech.longRunningRecognizeAsync(config, audio);
+            while (!response.isDone()) {
+                System.out.println("Waiting for response...");
+                Thread.sleep(10000);
+            }
+
+            List<com.google.cloud.speech.v1p1beta1.SpeechRecognitionResult> results = response.get().getResultsList();
+
+            for (com.google.cloud.speech.v1p1beta1.SpeechRecognitionResult result : results) {
+                // There can be several alternative transcripts for a given chunk of speech. Just use the
+                // first (most likely) one here.
+                SpeechRecognitionAlternative alternative = result.getAlternativesList().get(0);
+                System.out.printf("Transcription: %s\n", alternative.getTranscript());
+            }
+        }
+    }
+
+
     public class GoogleSpeechTransciption extends AsyncTask<Object,Void,String>{
 
         @Override
         protected String doInBackground(Object... objects) {
 
             try {
+
+                if (mMediaPlayer != null) {
+                    mVisualizer.release();
+                    mMediaPlayer.release();
+                    mMediaPlayer = null;
+                }
 
                 Speech speechService = new Speech.Builder(
                         AndroidHttp.newCompatibleTransport(),
@@ -376,7 +460,7 @@ public class AudioPreviewActivity extends AppCompatActivity {
                         .build();
 
 
-                RecognitionConfig recognitionConfig = new RecognitionConfig();
+                com.google.api.services.speech.v1beta1.model.RecognitionConfig recognitionConfig = new com.google.api.services.speech.v1beta1.model.RecognitionConfig();
                 recognitionConfig.setLanguageCode(selected_languageVideo);
                 recognitionConfig.setSampleRate(16000);
                 recognitionConfig.setEncoding("FLAC");
@@ -384,9 +468,8 @@ public class AudioPreviewActivity extends AppCompatActivity {
                 //recognitionConfig.setLanguageCode("en-US");
 
 
-                RecognitionAudio recognitionAudio = new RecognitionAudio();
-                //recognitionAudio.setContent(base64EncodedData);
-                recognitionAudio.setUri(base64EncodedData);
+                com.google.api.services.speech.v1beta1.model.RecognitionAudio recognitionAudio = new com.google.api.services.speech.v1beta1.model.RecognitionAudio();
+                recognitionAudio.setContent(base64EncodedData);
 
 
                 // Create request
@@ -402,15 +485,32 @@ public class AudioPreviewActivity extends AppCompatActivity {
 
 
                 // Extract transcript
-                SpeechRecognitionResult result = response.getResults().get(0);
+                com.google.api.services.speech.v1beta1.model.SpeechRecognitionResult result = response.getResults().get(0);
                 resultOutput= String.valueOf(response);
-
                 //transcript = result.getAlternatives().get(0).getTranscript(); //===this is zero index data from array-----
                 //Log.e("transcript Outout ----", transcript);
 
-            }catch (Exception allException){
-                allException.printStackTrace();
+
+
+                //==========================================================================================
+
+                /*
+                THIS IS FOR ASYNC METHOD TO READ FILE FROM GOOGLE STORE BUT GETTING ERROR OF AUTHENTICATION----
+                try {
+                    asyncRecognizeGcs("gs://jabri-speech/testaudio.flac");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }*/
+
+
+
+
+            }catch (Exception SpeechException) {
+                SpeechException.printStackTrace();
             }
+
+
+
 
             return resultOutput;
         }
@@ -450,6 +550,7 @@ public class AudioPreviewActivity extends AppCompatActivity {
 
     private void googleNatulraLanguageAPI(){
 
+        pd1.show();
 
         final CloudNaturalLanguage naturalLanguageService =
                 new CloudNaturalLanguage.Builder(
@@ -485,8 +586,6 @@ public class AudioPreviewActivity extends AppCompatActivity {
                                     .annotateText(request).execute();
 
 
-
-
                     final List<Entity> entityList = response.getEntities();
                     final float sentiment = response.getDocumentSentiment().getScore();
 
@@ -504,7 +603,19 @@ public class AudioPreviewActivity extends AppCompatActivity {
                                             .setTitle("Sentiment: " + sentiment)
                                             .setMessage("This audio file talks about :"
                                                     + entities)
-                                            .setNeutralButton("Okay", null)
+                                            .setNeutralButton("Result", new DialogInterface.OnClickListener() {
+                                                @Override
+                                                public void onClick(DialogInterface dialog, int which) {
+                                                    startActivity(new Intent(AudioPreviewActivity.this, NLApiData.class)
+                                                    .putExtra("data",response.toString()));
+                                                }
+                                            })
+                                            .setPositiveButton("Close", new DialogInterface.OnClickListener() {
+                                                @Override
+                                                public void onClick(DialogInterface dialog, int which) {
+                                                    dialog.dismiss();
+                                                }
+                                            })
                                             .create();
                             dialog.show();
                         }
@@ -513,7 +624,9 @@ public class AudioPreviewActivity extends AppCompatActivity {
 
                 } catch (IOException e) {
                     e.printStackTrace();
+                    pd1.dismiss();
                 }
+                pd1.dismiss();
 
                 // More code here
             }
@@ -714,6 +827,105 @@ public class AudioPreviewActivity extends AppCompatActivity {
         if(t1 !=null){
             t1.stop();
             t1.shutdown();
+        }
+    }
+
+
+
+    String LongSpeech;
+    private class GoogleLongSpeechTranslate extends AsyncTask<Object, Void, String> {
+        @Override
+        protected void onPreExecute()//execute thaya pela
+        {
+            super.onPreExecute();
+            // Log.d("pre execute", "Executando onPreExecute ingredients");
+            //inicia diálogo de progress, mostranto processamento com servidor.
+            progressDialog = ProgressDialog.show(AudioPreviewActivity.this, "Loading", "sending...", true, false);
+
+        }
+
+        @Override
+        protected String doInBackground(Object... parametros) {
+
+            try {
+
+
+
+                JsonObject mainJson = new JsonObject();
+
+
+                JsonObject config = new JsonObject();
+                config.addProperty("encoding","FLAC");
+                config.addProperty("sampleRateHertz",16000);
+                config.addProperty("languageCode","en-US");
+
+
+                JsonObject audio = new JsonObject();
+                audio.addProperty("content",base64EncodedData);
+
+                mainJson.add("config",config);
+                mainJson.add("audio",audio);
+
+                String responseUSerTitles = ResponseAPI(getBaseContext(), "https://speech.googleapis.com/v1/speech:longrunningrecognize?key="+parametros[0].toString() , mainJson.toString(),"post");
+                // Log.d("URL ====",Const.SERVER_URL_API+"filter_venues?"+upend);
+                TanslateResult=responseUSerTitles;
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return TanslateResult;
+        }
+
+
+        @Override
+        protected void onPostExecute(String result) {
+
+            String response_string = "";
+            // System.out.println("OnpostExecute----done-------");
+            super.onPostExecute(result);
+
+
+            try {
+                Log.i("LongTanslateResult---", TanslateResult);
+               /* JsonParser parser = new JsonParser();
+                JsonObject rootObj = parser.parse(TanslateResult).getAsJsonObject();
+
+                String translatedText = rootObj.get("data").getAsJsonObject().get("translations").getAsJsonArray().get(0).getAsJsonObject().get("translatedText").getAsString();
+
+                tvTranslateLanguage.setText(translatedText);
+
+                t1=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int status) {
+
+
+                        if (status == TextToSpeech.SUCCESS) {
+
+                            int result = t1.setLanguage(Locale.US);
+
+                            if (result == TextToSpeech.LANG_MISSING_DATA
+                                    || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                                Log.e("TTS", "This Language is not supported");
+                            } else {
+                                speakOut();
+                            }
+
+                        } else {
+                            Log.e("TTS", "Initilization Failed!");
+                        }
+
+
+                    }
+                });*/
+            }
+            catch (Exception e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+
+            progressDialog.dismiss();
         }
     }
 

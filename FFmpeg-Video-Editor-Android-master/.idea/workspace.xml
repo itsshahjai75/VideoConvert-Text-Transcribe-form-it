@@ -31,77 +31,42 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2961">
-              <caret line="730" column="0" lean-forward="false" selection-start-line="730" selection-start-column="0" selection-end-line="730" selection-end-column="0" />
+            <state relative-caret-position="-4323">
+              <caret line="705" column="7" lean-forward="false" selection-start-line="705" selection-start-column="7" selection-end-line="705" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AudioPreviewActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/AudioPreviewActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2009">
+              <caret line="572" column="39" lean-forward="false" selection-start-line="572" selection-start-column="39" selection-end-line="572" selection-end-column="39" />
               <folding>
-                <element signature="e#4751#4899#0" expanded="true" />
-                <element signature="e#4898#4899#0" expanded="true" />
-                <element signature="e#4942#5102#0" expanded="true" />
-                <element signature="e#5101#5102#0" expanded="true" />
-                <element signature="e#5149#5498#0" expanded="true" />
-                <element signature="e#5497#5498#0" expanded="true" />
-                <element signature="e#5537#5991#0" expanded="true" />
-                <element signature="e#5990#5991#0" expanded="true" />
-                <element signature="e#6036#6487#0" expanded="true" />
-                <element signature="e#6486#6487#0" expanded="true" />
-                <element signature="e#6530#7001#0" expanded="true" />
-                <element signature="e#7000#7001#0" expanded="true" />
-                <element signature="e#7042#7393#0" expanded="true" />
-                <element signature="e#7392#7393#0" expanded="true" />
-                <element signature="e#7438#7791#0" expanded="true" />
-                <element signature="e#7790#7791#0" expanded="true" />
-                <element signature="e#7835#8188#0" expanded="true" />
-                <element signature="e#8187#8188#0" expanded="true" />
-                <element signature="e#8232#9561#0" expanded="true" />
-                <element signature="e#8889#8911#0" expanded="true" />
-                <element signature="e#9020#9391#0" expanded="true" />
-                <element signature="e#9390#9391#0" expanded="true" />
-                <element signature="e#9560#9561#0" expanded="true" />
-                <element signature="e#10587#10595#0" expanded="true" />
-                <element signature="e#11758#11766#0" expanded="true" />
-                <element signature="e#14577#16460#0" expanded="true" />
-                <element signature="e#15321#15843#0" expanded="true" />
-                <element signature="e#15842#15843#0" expanded="true" />
-                <element signature="e#15958#16411#0" expanded="true" />
-                <element signature="e#16410#16411#0" expanded="true" />
-                <element signature="e#16459#16460#0" expanded="true" />
-                <element signature="e#16726#18609#0" expanded="true" />
-                <element signature="e#17470#17992#0" expanded="true" />
-                <element signature="e#17991#17992#0" expanded="true" />
-                <element signature="e#18107#18560#0" expanded="true" />
-                <element signature="e#18559#18560#0" expanded="true" />
-                <element signature="e#18608#18609#0" expanded="true" />
-                <element signature="e#20090#20328#0" expanded="true" />
-                <element signature="e#20327#20328#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="class#IBMWatsonAudioTranscription#0;class#AudioPreviewActivity#0" expanded="false" />
+                <element signature="method#asyncRecognizeGcs#0;class#AudioPreviewActivity#0" expanded="false" />
+                <element signature="class#GoogleSpeechTransciption#0;class#AudioPreviewActivity#0" expanded="false" />
+                <element signature="method#setupVisualizerFxAndUI#0;class#AudioPreviewActivity#0" expanded="false" />
+                <element signature="class#GoogleLangDetect#0;class#AudioPreviewActivity#0" expanded="false" />
+                <element signature="class#GoogleLangTranlate#0;class#AudioPreviewActivity#0" expanded="false" />
+                <element signature="method#speakOut#0;class#AudioPreviewActivity#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AudioPreviewActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/AudioPreviewActivity.java">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1009">
-              <caret line="526" column="0" lean-forward="true" selection-start-line="526" selection-start-column="0" selection-end-line="526" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#11311#11974#0" expanded="true" />
-                <element signature="e#11973#11974#0" expanded="true" />
-                <element signature="e#12015#12398#0" expanded="true" />
-                <element signature="e#12397#12398#0" expanded="true" />
-                <element signature="e#20942#21453#0" expanded="true" />
-                <element signature="e#21452#21453#0" expanded="true" />
-                <element signature="e#21527#21895#0" expanded="true" />
-                <element signature="e#21894#21895#0" expanded="true" />
-                <element signature="class#GoogleLangDetect#0;class#AudioPreviewActivity#0" expanded="false" />
-                <element signature="class#GoogleLangTranlate#0;class#AudioPreviewActivity#0" expanded="false" />
-                <element signature="method#speakOut#0;class#AudioPreviewActivity#0" expanded="false" />
-                <element signature="method#onPause#0;class#AudioPreviewActivity#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="500">
+              <caret line="42" column="14" lean-forward="false" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -113,7 +78,7 @@
           </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="231">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -2148,20 +2113,21 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_audio_preview.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_nlapi_data.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/NLApiData.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/AudioPreviewActivity.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-13" />
+    <option name="x" value="5107" />
     <option name="y" value="-13" />
-    <option name="width" value="2586" />
-    <option name="height" value="1386" />
+    <option name="width" value="3866" />
+    <option name="height" value="2106" />
   </component>
   <component name="ProjectView">
     <navigator currentView="AndroidView" proportions="" version="1">
@@ -2178,6 +2144,25 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="FFmpeg-Video-Editor-Android-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FFmpeg-Video-Editor-Android-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="FFmpeg-Video-Editor-Android-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FFmpeg-Video-Editor-Android-master" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -2204,17 +2189,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="E:/Sdk" />
     <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
     <property name="show.migrate.to.gradle.popup" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
+    <property name="last_opened_file_path" value="E:/AndroidWorkspace/ZuseDigital" />
     <property name="device.picker.selection" value="93fd9a660504" />
     <property name="ScreenshotViewer.SavePath" value="$USER_HOME$/Desktop" />
   </component>
@@ -2222,6 +2203,9 @@
     <key name="android.template.packageName">
       <recent name="videoeditor.jayshah.com.ffmpegvideoeditor" />
       <recent name="videoeditor.jay.com.ffmpegvideoeditor" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hp\Downloads\FFmpeg-Video-Editor-Android-master\VideoConvert-Text-Transcribe-form-it\FFmpeg-Video-Editor-Android-master\app" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -2389,40 +2373,40 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-13" y="-13" width="2586" height="1386" extended-state="6" />
+    <frame x="5107" y="-13" width="3866" height="2106" extended-state="6" />
     <layout>
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969254" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Flutter Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5733216" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4434629" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969254" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44330454" sideWeight="0.5010661" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Flutter Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31533477" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44330454" sideWeight="0.4989339" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.59540635" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928804" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915777" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Flutter Inspector" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14845416" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Flutter Inspector" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -2435,7 +2419,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/file_paths.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -2443,57 +2427,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/device-2018-08-15-111444.png">
-      <provider selected="true" editor-type-id="images">
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2376">
+          <caret line="72" column="5" lean-forward="true" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_nlapi_data.xml">
+      <provider editor-type-id="android-designer2">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/NLApiData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2961">
+        <state relative-caret-position="22110">
           <caret line="730" column="0" lean-forward="false" selection-start-line="730" selection-start-column="0" selection-end-line="730" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/AudioPreviewActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9867">
+          <caret line="367" column="17" lean-forward="false" selection-start-line="367" selection-start-column="17" selection-end-line="367" selection-end-column="17" />
           <folding>
-            <element signature="e#4751#4899#0" expanded="true" />
-            <element signature="e#4898#4899#0" expanded="true" />
-            <element signature="e#4942#5102#0" expanded="true" />
-            <element signature="e#5101#5102#0" expanded="true" />
-            <element signature="e#5149#5498#0" expanded="true" />
-            <element signature="e#5497#5498#0" expanded="true" />
-            <element signature="e#5537#5991#0" expanded="true" />
-            <element signature="e#5990#5991#0" expanded="true" />
-            <element signature="e#6036#6487#0" expanded="true" />
-            <element signature="e#6486#6487#0" expanded="true" />
-            <element signature="e#6530#7001#0" expanded="true" />
-            <element signature="e#7000#7001#0" expanded="true" />
-            <element signature="e#7042#7393#0" expanded="true" />
-            <element signature="e#7392#7393#0" expanded="true" />
-            <element signature="e#7438#7791#0" expanded="true" />
-            <element signature="e#7790#7791#0" expanded="true" />
-            <element signature="e#7835#8188#0" expanded="true" />
-            <element signature="e#8187#8188#0" expanded="true" />
-            <element signature="e#8232#9561#0" expanded="true" />
-            <element signature="e#8889#8911#0" expanded="true" />
-            <element signature="e#9020#9391#0" expanded="true" />
-            <element signature="e#9390#9391#0" expanded="true" />
-            <element signature="e#9560#9561#0" expanded="true" />
-            <element signature="e#10587#10595#0" expanded="true" />
-            <element signature="e#11758#11766#0" expanded="true" />
-            <element signature="e#14577#16460#0" expanded="true" />
-            <element signature="e#15321#15843#0" expanded="true" />
-            <element signature="e#15842#15843#0" expanded="true" />
-            <element signature="e#15958#16411#0" expanded="true" />
-            <element signature="e#16410#16411#0" expanded="true" />
-            <element signature="e#16459#16460#0" expanded="true" />
-            <element signature="e#16726#18609#0" expanded="true" />
-            <element signature="e#17470#17992#0" expanded="true" />
-            <element signature="e#17991#17992#0" expanded="true" />
-            <element signature="e#18107#18560#0" expanded="true" />
-            <element signature="e#18559#18560#0" expanded="true" />
-            <element signature="e#18608#18609#0" expanded="true" />
-            <element signature="e#20090#20328#0" expanded="true" />
-            <element signature="e#20327#20328#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="class#IBMWatsonAudioTranscription#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="method#asyncRecognizeGcs#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="class#GoogleSpeechTransciption#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="method#setupVisualizerFxAndUI#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="class#GoogleLangDetect#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="class#GoogleLangTranlate#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="method#speakOut#0;class#AudioPreviewActivity#0" expanded="false" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_nlapi_data.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/NLApiData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/file_paths.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/device-2018-08-15-111444.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/LanguagesGoogle.java">
@@ -2504,22 +2518,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jay/com/ffmpegvideoeditor/NLApiData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="42" column="58" lean-forward="false" selection-start-line="42" selection-start-column="58" selection-end-line="42" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jay/com/ffmpegvideoeditor/NLApiData.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_audio_preview.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -2549,17 +2548,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_nlapi_data.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/NLApiData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="429">
@@ -2568,25 +2556,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.apis/google-api-services-speech/v1beta1-rev336-1.22.0/d916f40506af1a276485ec5bcc978f88d76b7b37/google-api-services-speech-v1beta1-rev336-1.22.0-sources.jar!/com/google/api/services/speech/v1beta1/model/RecognitionAudio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1814">
+          <caret line="85" column="31" lean-forward="false" selection-start-line="85" selection-start-column="31" selection-end-line="85" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="8" column="55" lean-forward="false" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/jabri-209007-fa4fc7078d3d.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/AudioPreviewActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1009">
-          <caret line="526" column="0" lean-forward="true" selection-start-line="526" selection-start-column="0" selection-end-line="526" selection-end-column="0" />
+        <state relative-caret-position="2009">
+          <caret line="572" column="39" lean-forward="false" selection-start-line="572" selection-start-column="39" selection-end-line="572" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#11311#11974#0" expanded="true" />
-            <element signature="e#11973#11974#0" expanded="true" />
-            <element signature="e#12015#12398#0" expanded="true" />
-            <element signature="e#12397#12398#0" expanded="true" />
-            <element signature="e#20942#21453#0" expanded="true" />
-            <element signature="e#21452#21453#0" expanded="true" />
-            <element signature="e#21527#21895#0" expanded="true" />
-            <element signature="e#21894#21895#0" expanded="true" />
+            <element signature="class#IBMWatsonAudioTranscription#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="method#asyncRecognizeGcs#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="class#GoogleSpeechTransciption#0;class#AudioPreviewActivity#0" expanded="false" />
+            <element signature="method#setupVisualizerFxAndUI#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="class#GoogleLangDetect#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="class#GoogleLangTranlate#0;class#AudioPreviewActivity#0" expanded="false" />
             <element signature="method#speakOut#0;class#AudioPreviewActivity#0" expanded="false" />
-            <element signature="method#onPause#0;class#AudioPreviewActivity#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="42" column="14" lean-forward="false" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_nlapi_data.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/videoeditor/jayshah/com/ffmpegvideoeditor/activity/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4323">
+          <caret line="705" column="7" lean-forward="false" selection-start-line="705" selection-start-column="7" selection-end-line="705" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
